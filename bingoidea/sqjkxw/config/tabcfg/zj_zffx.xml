@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<config client="SZWSJ.DC" serviceId="UploadTable" size="3000" HZ=""
+	sleepTime='400'>
+	<!--
+		name 表名 text 中文注释 related 关联表 pk 主键列列名 fk 外键列列名 value 查询条件值 condition
+		查询条件 filter 过滤列列名
+	-->
+	<table name="ZJ_ZFFX" text="" related="" pk="ZJ_GMD.ZJRQ" fk=""
+		value="" condition="" filter="LOGICID" query="PID,PIDTYPE" errorname="ZJ_ZFFX_ERR"
+		timeout="ZJ_ZFFX_TO">
+		<col name="PID" text="" type="String" />
+		<col name="PIDTYPE" text="" type="String" />
+		<col name="LOGICID" text="" type="String" />
+		<col name="JLXH" text="" type="String" />
+		<col name="ZJRQ" text="" type="Timestamp" />
+		<col name="SYS_PK" text="" type="String" />
+		<col name="MACHINE_MODEL" text="" type="String" />
+		<col name="BODY_TYPE" text="" type="String" />
+		<col name="GENDER" text="" type="String" />
+		<col name="AGE" text="" type="String" />
+		<col name="HEIGHT" text="" type="String" />
+		<col name="WEIGHT" text="" type="String" />
+		<col name="BMI" text="" type="String" />
+		<col name="BMR" text="" type="String" />
+		<col name="FAT" text="" type="String" />
+		<col name="FAT_MASS" text="" type="String" />
+		<col name="FFM" text="" type="String" />
+		<col name="TBW" text="" type="String" />
+		<col name="DES_FAT" text="" type="String" />
+		<col name="DES_FAT_MASS" text="" type="String" />
+		<col name="IMP_BODY" text="" type="String" />
+		<col name="IMP_RLEG" text="" type="String" />
+		<col name="IMP_LLEG" text="" type="String" />
+		<col name="IMP_RARM" text="" type="String" />
+		<col name="IMP_LARM" text="" type="String" />
+		<col name="ANALY_RLEG_FAT" text="" type="String" />
+		<col name="ANALY_RLEG_FAT_MASS" text="" type="String" />
+		<col name="ANALY_RLEG_FFM" text="" type="String" />
+		<col name="ANALY_RLEG_PRED_MUSCLE_MASS" text="" type="String" />
+		<col name="ANALY_LLEG_FAT" text="" type="String" />
+		<col name="ANALY_LLEG_FAT_MASS" text="" type="String" />
+		<col name="ANALY_LLEG_FFM" text="" type="String" />
+		<col name="ANALY_LLEG_PRED_MUSCLE_MASS" text="" type="String" />
+		<col name="ANALY_LARM_FAT" text="" type="String" />
+		<col name="ANALY_LARM_FAT_MASS" text="" type="String" />
+		<col name="ANALY_LARM_FFM" text="" type="String" />
+		<col name="ANALY_LARM_PRED_MUSCLE_MASS" text="" type="String" />
+		<col name="ANALY_RARM_FAT" text="" type="String" />
+		<col name="ANALY_RARM_FAT_MASS" text="" type="String" />
+		<col name="ANALY_RARM_FFM" text="" type="String" />
+		<col name="ANALY_RARM_PRED_MUSCLE_MASS" text="" type="String" />
+		<col name="ANALY_TRUNK_FAT" text="" type="String" />
+		<col name="ANALY_TRUNK_FAT_MASS" text="" type="String" />
+		<col name="ANALY_TRUNK_FFM" text="" type="String" />
+		<col name="ANALY_TRUNK_PRED_MUSCLE_MASS" text="" type="String" />
+		<col name="SYS_STRING1" text="" type="String" />
+		<col name="SYS_STRING2" text="" type="String" />
+		<col name="SYS_STRING3" text="" type="String" />
+		<col name="SYS_STRING4" text="" type="String" />
+		<col name="SYS_STRING5" text="" type="String" />
+		<col name="REMARKS" text="" type="String" />
+		<col name="SYS_CD" text="" type="Timestamp" />
+		<col name="SYS_UD" text="" type="String" />
+		<col name="SATISFY_YN" text="" type="String" />
+		<col name="JKKH" text="" type="String" />
+		<col name="CZJD" text="" type="String" />
+		<col name="NZFAT" text="" type="String" />
+		<col name="JRL" text="" type="String" />
+		<col name="GZ" text="" type="String" />
+		<col name="JY" text="" type="String" />
+	</table>
+</config>

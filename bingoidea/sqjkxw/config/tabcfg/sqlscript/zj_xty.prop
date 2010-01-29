@@ -1,0 +1,6 @@
+#Mon Jan 18 20:06:25 CST 2010
+script=select top {size} * from zj_xty where zjrq >'{zjrq}' and pid is not null  and pid\!\=''  order by zjrq asc
+key={zjrq}
+arge={size}
+kval=2010-01-18 16\:19\:45.34
+value=80000
