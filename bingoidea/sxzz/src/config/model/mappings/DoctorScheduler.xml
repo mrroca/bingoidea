@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="DoctorScheduler">
+	<typeAlias alias="DoctorScheduler" type="cn.com.bsoft.model.DoctorScheduler" />
+	<resultMap id="DoctorSchedulerResult" class="DoctorScheduler">
+		<result property="hospitalcode" column="hospitalcode" />
+		<result property="doctorcode" column="doctorcode" />
+		<result property="clinicquota" column="clinicquota" />
+		<result property="amorpm" column="amorpm" />
+		<result property="weekday" column="weekday" />
+		<result property="deptcode" column="deptcode" />
+	</resultMap>
+	<insert id="insertDoctorScheduler" parameterClass="java.util.Map">
+		insert into
+		ZY_YSPB (hospitalcode,doctorcode,clinicquota,amorpm,weekday,deptcode,workdate)
+		values
+		(#hospitalcode#,#doctorcode#,#clinicquota#,#amorpm#,#weekday#,#deptcode#,#workdate#)
+	</insert>
+</sqlMap>

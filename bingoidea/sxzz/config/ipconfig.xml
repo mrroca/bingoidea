@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<hosip ip='127.0.0.1' />
+	<hosip ip='10.41.109.41' />
+	<hosip ip='172.25.11.44' />
+	<hosip ip='172.25.14.34' />
+</root> 

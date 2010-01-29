@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<message>
+	<msg description="医院代码" name="hospitalcode"></msg>
+	<msg description="医生代码" name="doctorcode"></msg>
+	<msg description="门诊限额" name="clinicquota"></msg>
+	<msg description="上午或下午" name="amorpm"></msg>
+	<msg description="星期" name="weekday"></msg>
+	<msg description="科室代码" name="deptcode"></msg>
+	<msg description="工作日期" name="workdate"></msg>
+</message>

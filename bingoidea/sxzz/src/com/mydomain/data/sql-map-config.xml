@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE sqlMapConfig      
+    PUBLIC "-//ibatis.apache.org//DTD SQL Map Config 2.0//EN"      
+    "http://ibatis.apache.org/dtd/sql-map-config-2.dtd">
+
+<sqlMapConfig>
+
+	<!--
+		Configure a built-in transaction manager. If you're using an app
+		server, you probably want to use its transaction manager and a managed
+		datasource
+	-->
+	<transactionManager type="JDBC" commitRequired="false">
+		<dataSource type="C3P0">
+			<property name="driverClass" value="oracle.jdbc.OracleDriver" />
+			<property name="jdbcUrl" value="jdbc:oracle:thin:@172.25.220.101:1521:szdc" />
+			<property name="user" value="szdc" />
+			<property name="password" value="bsoft" />
+			<property name="acquireIncrement" value="5" />
+			<property name="acquireRetryAttempts" value="30" />
+			<property name="acquireRetryDelay" value="1000" />
+			<property name="autoCommitOnClose" value="false" />
+			<property name="breakAfterAcquireFailure" value="false" />
+			<property name="checkoutTimeout" value="0" />
+			<property name="idleConnectionTestPeriod" value="60" />
+			<property name="initialPoolSize" value="10" />
+			<property name="maxIdleTime" value="60" />
+			<property name="maxPoolSize" value="30" />
+			<property name="minPoolSize" value="5" />
+			<property name="maxStatements" value="0" />
+			<property name="numHelperThreads" value="3" />
+			<property name="propertyCycle" value="300" />
+			<property name="testConnectionOnCheckin" value="true" />
+		</dataSource>
+	</transactionManager>
+
+	<!--
+		List the SQL Map XML files. They can be loaded from the classpath, as
+		they are here (com.domain.data...)
+	-->
+	<sqlMap resource="com/mydomain/data/Account.xml" />
+	<!--
+		List more here... <sqlMap resource="com/mydomain/data/Order.xml"/>
+		<sqlMap resource="com/mydomain/data/Documents.xml"/>
+	-->
+
+</sqlMapConfig>
