@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="Message">
+
+	<typeAlias alias="Message" type="cn.com.bsoft.model.Message" />
+
+	<resultMap id="MessageResult" class="Message">
+		<result property="workdate" column="GZRQ" />
+	</resultMap>
+
+	<select id="getAllMessage" resultMap="MessageResult">
+		select * from ZY_YSPB
+	</select>
+	<select id="getMessageByCondition" resultClass="Message">
+		select GZRQ as workdate
+		from
+		ZY_YSPB
+		where
+		yydm = #hospitalcode# and ysdm
+		= #doctorcode#
+	</select>
+
+	<!--
+		<insert id="insertMessage" parameterClass="Message"> insert into
+		ACCOUNT ( ACC_ID, ACC_FIRST_NAME, ACC_LAST_NAME, ACC_EMAIL values (
+		#id#, #firstName#, #lastName#, #emailAddress# ) </insert> <update
+		id="updateMessage" parameterClass="Message"> update ACCOUNT set
+		ACC_FIRST_NAME = #firstName#, ACC_LAST_NAME = #lastName#, ACC_EMAIL =
+		#emailAddress# where ACC_ID = #id# </update> <delete
+		id="deleteMessage" parameterClass="Message"> delete from ACCOUNT where
+		ACC_ID = #id# </delete>
+	-->
+
+</sqlMap>

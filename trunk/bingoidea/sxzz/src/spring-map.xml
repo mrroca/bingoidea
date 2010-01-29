@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+	<bean id="process" class="cn.com.bsoft.process.ProcessMessageImpl" />
+
+	<!-- test user -->
+	<!--
+		<bean id="userDAO" class="cn.com.bsoft.dao.UserDaoImpl"> <property
+		name="sqlMapClient" ref="sqlMapClient" /> </bean>
+	-->
+
+	<!-- doctorScheduler service -->
+	<!--
+		<bean id="doctorScheduler"
+		class="cn.com.bsoft.dao.DoctorSchedulerDaoImpl"> <property
+		name="sqlMapClientTemplate" ref="sqlMapClientTemplate" /> </bean>
+	-->
+
+	<bean id="doctorScheduler" class="cn.com.bsoft.dao.DoctorSchedulerDaoImpl">
+		<property name="sqlMapClient" ref="sqlMapClient" />
+	</bean>
+
+	<!-- user service -->
+	<!--
+		<bean id="user" class="cn.com.bsoft.dao.UserDaoImpl"> <property
+		name="sqlMapClient" ref="sqlMapClient" /> </bean>
+	-->
+</beans> 

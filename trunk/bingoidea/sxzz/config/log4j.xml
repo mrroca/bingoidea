@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+	<appender name="appender1" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="logs/log4j.log" />
+		<param name="MaxFileSize" value="20MB" />
+		<param name="MaxBackupIndex" value="10" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="[%p] [%d{yyyy-MM-dd HH:mm:ss}] [%c:%L] [%r ms] :[%m]%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="levelMin" value="debug" />
+			<param name="levelMax" value="warn" />
+			<param name="AcceptOnMatch" value="true" />
+		</filter>
+	</appender>
+	<appender name="appender2" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="|%-5p| %d | %c: at %L line| %r ms | %m|%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="levelMin" value="debug" />
+			<param name="levelMax" value="warn" />
+			<param name="AcceptOnMatch" value="true" />
+		</filter>
+	</appender>
+	<category name="org.logicalcobwebs.proxool">
+		<priority value="info" />
+	</category>
+	<category name="org.springframework">
+		<priority value="warn" />
+	</category>
+	<!--
+		category name="com.ibatis"> <priority value="debug" /> </category
+	-->
+	<category name="com.ibatis.common.jdbc.SimpleDataSource">
+		<priority value="debug" />
+	</category>
+	<category name="com.ibatis.common.jdbc.ScriptRunner">
+		<priority value="debug" />
+	</category>
+	<category name="com.ibatis.sqlmap.engine.impl.SqlMapClientDelegate">
+		<priority value="debug" />
+	</category>
+	<category name="java.sql.Connection">
+		<priority value="debug" />
+	</category>
+	<category name="java.sql.Statement">
+		<priority value="debug" />
+	</category>
+	<category name="java.sql.PreparedStatement">
+		<priority value="debug" />
+	</category>
+	<root>
+		<priority value="INFO" />
+		<appender-ref ref="appender1" />
+		<appender-ref ref="appender2" />
+	</root>
+</log4j:configuration>

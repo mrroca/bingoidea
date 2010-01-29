@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="User">
+	<typeAlias alias="User" type="cn.com.bsoft.model.User" />
+	<resultMap id="UserResult" class="User">
+		<result property="user" column="USER" />
+		<result property="password" column="PASSWORD" />
+	</resultMap>
+	<select id="getAll" resultMap="UserResult">
+		select USER,PASSWORD from USER
+	</select>
+	<insert id="insertMessage" parameterClass="java.util.Map">
+		insert into USER
+		(USER,PASSWORD) values (#user#,#password#)
+	</insert>
+</sqlMap>
