@@ -1,0 +1,12 @@
+<students> 
+<student> 
+<name>Tom</name> 
+<birthday>1976-2-15</birthday> 
+<score>92</score> 
+</student> 
+<student> 
+<name>alice</name> 
+<birthday>1978-4-18</birthday> 
+<score>99</score> 
+</student> 
+</students>
