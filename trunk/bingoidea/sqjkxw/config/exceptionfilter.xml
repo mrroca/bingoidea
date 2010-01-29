@@ -1,0 +1,6 @@
+﻿<!-- 本文件是程序进行异常忽略的基准数据,msg节点内容为忽略异常的异常信息 -->
+<exception>
+	<unit type='SQLException'>
+	<msg>ORA-00001</msg>
+	</unit>
+</exception>

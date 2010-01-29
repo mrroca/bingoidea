@@ -1,0 +1,21 @@
+<database entityname="mytest">
+	
+	<driver>oracle.jdbc.driver.OracleDriver</driver>
+	<url>jdbc:oracle:thin:@172.25.5.23:1521:ZHLIS</url>
+	<username>AB193CCD10D4496B</username>
+	<password>AB193CCD10D4496B</password>
+	<center_driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</center_driver>
+	<center_url>jdbc:sqlserver://172.25.230.101:1433;DatabaseName=SZDC_SMHBB</center_url>
+	<center_username>ECFCC49ED2DCC66498A94AF13EED00E3F7FFF13DFE16E4EE</center_username>
+	<center_password>99635873390B724D1A12E2254B23CC7B</center_password>
+	
+	<driver>oracle.jdbc.driver.OracleDriver</driver>
+	<url>jdbc:oracle:thin:@172.25.11.17:1521:ZHLIS</url>
+	<username>D6D3365C40BC5F64</username>
+	<password>1AD30D7DF3B5BE23</password>
+	<center_driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</center_driver>
+	<center_url>jdbc:sqlserver://172.25.230.101:1433;DatabaseName=SZDC_SMHDQ</center_url>
+	<center_username>ECFCC49ED2DCC664CB01D8B6C9702C14F7FFF13DFE16E4EE</center_username>
+	<center_password>97A5617188088DA3A226FD3BC2B3FD73</center_password>
+	
+</database>

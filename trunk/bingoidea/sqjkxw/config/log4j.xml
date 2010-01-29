@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<!-- 输出到文件 -->
+	<appender name="appender1" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="../logs/log4j.log" />
+		<param name="MaxFileSize" value="100KB" />
+		<param name="MaxBackupIndex" value="7" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="[%d{yyyy-MM-dd HH:mm:ss}] [%p] [%c:%L] [%r ms] :[%m]%n" />
+		</layout>
+	</appender>
+
+
+	<!-- 忽略org.quartz包内所有info及info级别以下的信息 -->
+	<category name="org.quartz">
+		<priority value="WARN" />
+	</category>
+
+
+	<!-- 定义日志级别 OFF、FATAL、ERROR、WARN、INFO、DEBUG、ALL -->
+	<root>
+		<priority value="INFO" />
+		<appender-ref ref="appender1" />
+	</root>
+</log4j:configuration>

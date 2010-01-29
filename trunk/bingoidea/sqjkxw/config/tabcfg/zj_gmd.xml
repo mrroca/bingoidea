@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<config client="SZWSJ.DC" serviceId="UploadTable" size="3000" HZ=""
+	sleepTime='400'>
+	<!--
+		name 表名 text 中文注释 related 关联表 pk 主键列列名 fk 外键列列名 value 查询条件值 condition
+		查询条件 filter 过滤列列名
+	-->
+	<table name="ZJ_GMD" text="" related="" pk="ZJ_GMD.ZJRQ" fk=""
+		value="" condition="" filter="LOGICID" query="PID,PIDTYPE" errorname="ZJ_GMD_ERR"
+		timeout="ZJ_GMD_TO">
+		<col name="PID" text="" type="String" />
+		<col name="PIDTYPE" text="" type="String" />
+		<col name="LOGICID" text="" type="String" />
+		<col name="JLXH" text="" type="String" />
+		<col name="ZJRQ" text="" type="Timestamp" />
+		<col name="XB" text="" type="String" />
+		<col name="CSNY" text="" type="Timestamp" />
+		<col name="CLBW" text="" type="String" />
+		<col name="SOSZ" text="" type="String" />
+		<col name="TZ" text="" type="String" />
+		<col name="ZZ" text="" type="String" />
+		<col name="GMDJL" text="" type="String" />
+		<col name="CZJD" text="" type="String" />
+		<col name="JY" text="" type="String" />
+	</table>
+</config>
