@@ -12,6 +12,7 @@ import cn.com.bsoft.util.SystemInitImpl;
 
 public class MessageSenderImpl
 {
+    private int count = 0 ;
     public void init()
     {
         SystemInitImpl.init();
@@ -29,7 +30,8 @@ public class MessageSenderImpl
         Connection connection = null;
         Session session = null;
         MessageCreatorImpl mc = new MessageCreatorImpl();
-        String s = "this is message!";
+        String s = "this is message " + count + "!";
+        count++;
         try
         {
             connection = cf.createConnection();
@@ -62,7 +64,9 @@ public class MessageSenderImpl
     {
         MessageSenderImpl msi = new MessageSenderImpl();
         msi.init();
-        msi.sendMessage();
-
+        for (int i = 0; i <= 9; i++)
+        {
+            msi.sendMessage();
+        }
     }
 }

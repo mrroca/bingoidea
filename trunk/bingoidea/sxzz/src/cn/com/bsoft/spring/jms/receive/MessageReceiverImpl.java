@@ -27,7 +27,7 @@ public class MessageReceiverImpl
             {
                 try
                 {
-                    System.out.println("receive message ! the message is " + txtmsg.getText());
+                    System.out.println("receive message ! the message is '" + txtmsg.getText()+"'");
                 }
                 catch (JMSException e)
                 {
