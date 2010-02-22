@@ -94,10 +94,12 @@ public class SendMail
         if (need)
         {
             props.put("mail.smtp.auth", "true");
+            props.put("mail.smtp.starttls.enable", "true");
         }
         else
         {
             props.put("mail.smtp.auth", "false");
+            props.put("mail.smtp.starttls.enable", "false");
         }
     }
 
@@ -268,7 +270,8 @@ public class SendMail
             mimeMsg.setContent(mp);
             mimeMsg.saveChanges();
             System.out.println("正在发送邮件....");
-
+            
+            //java.security.Security.addProvider(new com.sun.net.ssl.internal.ssl.Provider());
             Session mailSession = Session.getInstance(props, null);
             Transport transport = mailSession.getTransport("smtp");
             transport.connect((String) props.get("mail.smtp.host"), username,
@@ -298,7 +301,7 @@ public class SendMail
 
         String mailbody = "九九艳阳天";
 
-        SendMail themail = new SendMail("smtp.163.com");
+        SendMail themail = new SendMail("smtp.gmail.com");
         themail.setNeedAuth(true);
 
         if (themail.setSubject("标题") == false)
@@ -307,11 +310,11 @@ public class SendMail
             return;
         if (themail.setTo("chentan04296912@163.com") == false)
             return;
-        if (themail.setFrom("chentan04296912@163.com") == false)
+        if (themail.setFrom("bingoidea@gmail.com") == false)
             return;
         if (themail.addFileAffix("c:\\sun.jpg") == false)
             return;
-        themail.setNamePass("chentan04296912", "19850429");
+        themail.setNamePass("bingoidea", "19850429");
 
         if (themail.sendout() == false)
             return;
