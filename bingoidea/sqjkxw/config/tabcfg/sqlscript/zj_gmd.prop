@@ -2,5 +2,5 @@
 script=select top {size} * from zj_gmd where zjrq >'{zjrq}' and pid is not null  and pid\!\=''  order by zjrq asc
 key={zjrq}
 arge={size}
-kval=2010-01-18 16\:07\:00.0
+kval=2009-1-1
 value=80000
