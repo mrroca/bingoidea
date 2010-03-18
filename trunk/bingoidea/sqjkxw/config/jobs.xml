@@ -35,7 +35,7 @@
 				<calendar-name>holidayCalendar</calendar-name>
 				<job-name>FGNUpload</job-name>
 				<job-group>SZWSJ</job-group>
-				<start-time>2010-01-18T21:05:00</start-time>
+				<start-time>2010-01-18T13:08:00</start-time>
 				<repeat-count>-1</repeat-count>
 				<repeat-interval>86400000</repeat-interval>
 			</simple>
@@ -59,7 +59,7 @@
 				<calendar-name>holidayCalendar</calendar-name>
 				<job-name>GMDUpload</job-name>
 				<job-group>SZWSJ</job-group>
-				<start-time>2010-01-18T21:05:00</start-time>
+				<start-time>2010-01-18T13:08:00</start-time>
 				<repeat-count>-1</repeat-count>
 				<repeat-interval>86400000</repeat-interval>
 			</simple>
@@ -83,7 +83,7 @@
 				<calendar-name>holidayCalendar</calendar-name>
 				<job-name>SGTZUpload</job-name>
 				<job-group>SZWSJ</job-group>
-				<start-time>2010-01-18T21:05:00</start-time>
+				<start-time>2010-01-18T13:08:00</start-time>
 				<repeat-count>-1</repeat-count>
 				<repeat-interval>86400000</repeat-interval>
 			</simple>
@@ -107,7 +107,7 @@
 				<calendar-name>holidayCalendar</calendar-name>
 				<job-name>XTYUpload</job-name>
 				<job-group>SZWSJ</job-group>
-				<start-time>2010-01-18T21:05:00</start-time>
+				<start-time>2010-01-18T13:08:00</start-time>
 				<repeat-count>-1</repeat-count>
 				<repeat-interval>86400000</repeat-interval>
 			</simple>
@@ -131,7 +131,7 @@
 				<calendar-name>holidayCalendar</calendar-name>
 				<job-name>XYCLUpload</job-name>
 				<job-group>SZWSJ</job-group>
-				<start-time>2010-01-18T21:05:00</start-time>
+				<start-time>2010-01-18T13:08:00</start-time>
 				<repeat-count>-1</repeat-count>
 				<repeat-interval>86400000</repeat-interval>
 			</simple>
@@ -155,7 +155,7 @@
 				<calendar-name>holidayCalendar</calendar-name>
 				<job-name>ZFFXUpload</job-name>
 				<job-group>SZWSJ</job-group>
-				<start-time>2010-01-18T21:05:00</start-time>
+				<start-time>2010-01-18T13:08:00</start-time>
 				<repeat-count>-1</repeat-count>
 				<repeat-interval>86400000</repeat-interval>
 			</simple>
@@ -179,7 +179,7 @@
 				<calendar-name>holidayCalendar</calendar-name>
 				<job-name>ZJSXUpload</job-name>
 				<job-group>SZWSJ</job-group>
-				<start-time>2010-01-18T21:05:00</start-time>
+				<start-time>2010-01-18T13:08:00</start-time>
 				<repeat-count>-1</repeat-count>
 				<repeat-interval>86400000</repeat-interval>
 			</simple>

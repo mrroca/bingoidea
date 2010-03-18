@@ -3,4 +3,4 @@ script=select top {size} * from zj_xycl where zjrq >'{zjrq}' and pid is not null
 key={zjrq}
 arge={size}
 value=80000
-kval=2010-01-18 16\:15\:09.73
+kval=2009-1-1
