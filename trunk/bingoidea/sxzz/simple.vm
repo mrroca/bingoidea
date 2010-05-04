@@ -1,0 +1,78 @@
+/*  
+ * $ID: $XxxxEntityDao .java  
+ */   
+  
+import java.io.Serializable;   
+import java.util.List;   
+  
+import com.packagename.entity.$XxxxEntity;   
+import com.packagename.exception.SomeException;   
+  
+import org.hibernate.Query;   
+  
+  
+/**  
+ *    
+ */  
+public class $XxxxEntityDao extends AbstractDao {   
+  
+  
+    /**  
+     * Constructor  
+     */  
+    public $XxxxEntityDao() {   
+    }   
+       
+    /**  
+     * {@inheritDoc}  
+     * @see com.packagename.dao.AbstractDao#get(java.io.Serializable)  
+     */  
+    @Override  
+    public Object get(Serializable id) throws SomeException {   
+        return super.get(id);   
+    }   
+       
+    /**  
+     * {@inheritDoc}  
+     * @see com.packagename.dao.AbstractDao#delete(java.lang.Object)  
+     */  
+    public void delete($XxxxEntity entity) throws SomeException {   
+        super.delete(entity);   
+    }   
+       
+    /**  
+     * {@inheritDoc}  
+     * @see com.packagename.dao.AbstractDao#save(java.lang.Object)  
+     */  
+    public void save($XxxxEntity entity) throws SomeException {   
+        super.save(entity);   
+    }   
+       
+    /**  
+     * insert or update $XxxxEntity.  
+     * @param entity $XxxxEntity  
+     * @throws SomeException Database Exception  
+     */  
+    public void saveOrUpdate($XxxxEntity entity) throws SomeException {   
+        super.saveOrUpdate(entity);   
+    }   
+       
+    /**  
+     * update $XxxxEntity  
+     * @param entity $XxxxEntity  
+     * @throws SomeException Database Exception  
+     */  
+    public void update($XxxxEntity entity) throws SomeException {   
+        super.update(entity);   
+    }   
+  
+    /**  
+     * refresh  
+     * @param entity $XxxxEntity  
+     * @param lock lock or not  
+     * @throws SomeException Database Exception  
+     */  
+    public void refresh($XxxxEntity entity, boolean lock) throws SomeException {   
+        super.refresh(entity, lock);   
+    }   
+}
