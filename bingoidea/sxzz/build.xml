@@ -28,7 +28,7 @@
 		<mkdir dir="${doc.dir}" />
 	</target>
 	<target name="compile" depends="init">
-		<javac srcdir="${src.dir}" encoding="${output.encoding}" fork="true" executable="${env.JAVA_HOME}\bin\javac" memoryMaximumSize="256m" destdir="${build.dir}">
+		<javac srcdir="${src.dir}" encoding="${output.encoding}" debug="true" fork="true" executable="${env.JAVA_HOME}\bin\javac" memoryMaximumSize="256m" destdir="${build.dir}">
 			<classpath refid="master-classpath" />
 		</javac>
 	</target>
