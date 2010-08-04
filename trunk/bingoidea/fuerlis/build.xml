@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="clean" name="fuerlis">
+	<description>Java project</description>
+	<property environment="env" />
+	<property name="src.dir" location="src" />
+	<property name="build.dir" location="build" />
+	<property name="dist.dir" location="dist" />
+	<property name="lib.dir" location="lib" />
+	<property name="doc.dir" location="doc" />
+	<property name="bin.dir" location="bin" />
+	<property name="resource.dir" location="resource" />
+	<property name="config.dir" location="config" />
+	<property name="deploy.dir" location="E:\Projects" />
+	<property name="projectName" value="fuerlis" />
+	<property name="output.encoding" value="UTF-8" />
+	<property name="version" value="1.0" />
+	<property name="company" value="Bsoft" />
+	<property name="author" value="Wangsm" />
+	<property name="copyright" value="Copyright (c) 2010 The Bsoft Foundation. All rights reserved." />
+	<path id="master-classpath">
+		<fileset file="${lib.dir}/*.jar" />
+		<pathelement location="${build.dir}" />
+	</path>
+	<target name="init">
+		<tstamp />
+		<mkdir dir="${build.dir}" />
+		<mkdir dir="${dist.dir}" />
+		<mkdir dir="${doc.dir}" />
+	</target>
+	<target name="compile" depends="init">
+		<javac srcdir="${src.dir}" encoding="${output.encoding}" fork="true" executable="${env.JAVA_HOME}\bin\javac" memoryMaximumSize="256m" destdir="${build.dir}">
+			<classpath refid="master-classpath" />
+		</javac>
+	</target>
+	<target name="dist" depends="compile">
+		<jar destfile="${dist.dir}/${projectName}-${version}-${DSTAMP}.jar" basedir="${build.dir}">
+			<manifest>
+				<attribute name="Built-By" value="${company}" />
+				<attribute name="Version" value="${version}" />
+				<attribute name="Author" value="${author}" />
+				<attribute name="Main-Class" value="${projectName}" />
+			</manifest>
+		</jar>
+		<jar destfile="${dist.dir}/${projectName}-src-${version}-${DSTAMP}.jar" basedir="${src.dir}">
+			<manifest>
+				<attribute name="Built-By" value="${company}" />
+				<attribute name="Version" value="${version}" />
+				<attribute name="Author" value="${author}" />
+				<attribute name="Main-Class" value="${projectName}" />
+			</manifest>
+		</jar>
+	</target>
+	<target name="build" depends="dist">
+		<delete dir="${deploy.dir}/${projectName}" />
+		<mkdir dir="${deploy.dir}/${projectName}/bin" />
+		<mkdir dir="${deploy.dir}/${projectName}/bin/config" />
+		<mkdir dir="${deploy.dir}/${projectName}/conf" />
+		<mkdir dir="${deploy.dir}/${projectName}/lib" />
+		<mkdir dir="${deploy.dir}/${projectName}/logs" />
+		<mkdir dir="${deploy.dir}/${projectName}/report" />
+		<copy todir="${deploy.dir}/${projectName}/bin" overwrite="true">
+			<fileset dir="${resource.dir}">
+				<include name="*.bat" />
+				<include name="wrapper.exe" />
+			</fileset>
+		</copy>
+		<copy todir="${deploy.dir}/${projectName}/lib" overwrite="true">
+			<fileset dir="${lib.dir}">
+				<include name="*.jar" />
+			</fileset>
+			<fileset dir="${dist.dir}">
+				<include name="*.jar" />
+			</fileset>
+			<fileset dir="${resource.dir}">
+				<include name="wrapper.jar" />
+				<include name="wrapper.dll" />
+			</fileset>
+		</copy>
+		<copy todir="${deploy.dir}/${projectName}/conf" overwrite="true">
+			<fileset dir="${resource.dir}">
+				<include name="wrapper.conf" />
+			</fileset>
+		</copy>
+		<copy todir="${deploy.dir}/${projectName}/bin/config" overwrite="true">
+			<fileset dir="${config.dir}">
+				<include name="**" />
+			</fileset>
+		</copy>
+	</target>
+	<target name="javadoc" depends="build">
+		<javadoc destdir="${doc.dir}" windowtitle="${projectName}-docs" use="yes" linksource="no" splitindex="yes" encoding="${output.encoding}" docencoding="${output.encoding}" defaultexcludes="yes" author="true" version="true">
+			<classpath refid="master-classpath" />
+			<packageset dir="${src.dir}">
+				<include name="**" />
+			</packageset>
+			<doctitle>
+				<![CDATA[<h1>docs API</h1>]]></doctitle>
+		<bottom>
+			<![CDATA[<i>${copyright}</i>]]></bottom>
+</javadoc>
+</target>
+<target name="about" depends="build">
+<echo message="This build.xml file for building ${projectName} application" />
+</target>
+<target name="clean" depends="about">
+<delete dir="${build.dir}" />
+<delete dir="${dist.dir}" />
+</target>
+</project>
