@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<config client="SZWSJ.DC" serviceId="UploadTable" size="3000" HZ=""
+	sleepTime='400'>
+	<!--
+		name 表名 text 中文注释 related 关联表 pk 主键列列名 fk 外键列列名 value 查询条件值 condition
+		查询条件 filter 过滤列列名
+	-->
+	<table name="MR_DIAGNOSIS" text="HIS病案诊断表" related="" pk="ADMISSIONID" fk=""
+		value="" condition="" filter="" query='' errorname="MR_DIAGNOSIS_ERR"
+		timeout="MR_DIAGNOSIS_TO">
+		<col name="ADMISSIONID" text="" type="String" />
+		<col name="ADMISSIONDATE" text="" type="Timestamp" />
+		<col name="HOSPITALCODE" text="" type="String" />
+		<col name="CYZDDM" text="" type="String" />
+		<col name="CYZDMC" text="" type="String" />
+		<col name="MZZDDM" text="" type="String" />
+		<col name="MZZDMC" text="" type="String" />
+		<col name="RYZDDM" text="" type="String" />
+		<col name="RYZDMC" text="" type="String" />
+		<col name="SQZDDM" text="" type="String" />
+		<col name="SQZDMC" text="" type="String" />
+		<col name="SHZDDM" text="" type="String" />
+		<col name="SHZDMC" text="" type="String" />
+		<col name="SJZDDM" text="" type="String" />
+		<col name="SJZDMC" text="" type="String" />
+		<col name="FSZDDM" text="" type="String" />
+		<col name="FSZDMC" text="" type="String" />
+		<col name="CSZDDM" text="" type="String" />
+		<col name="CSZDMC" text="" type="String" />
+		<col name="BLZDDM" text="" type="String" />
+		<col name="BLZDMC" text="" type="String" />
+		<col name="BFZDDM" text="" type="String" />
+		<col name="BFZDMC" text="" type="String" />
+		<col name="YNGRDM" text="" type="String" />
+		<col name="YNGRMC" text="" type="String" />
+		<col name="ZYZDDM" text="" type="String" />
+		<col name="ZYZDMC" text="" type="String" />
+	</table>
+</config>

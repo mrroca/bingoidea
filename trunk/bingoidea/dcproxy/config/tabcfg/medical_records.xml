@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<config client="SZWSJ.DC" serviceId="UploadTable" size="3000" HZ=""
+	sleepTime='400'>
+	<!--
+		name 表名 text 中文注释 related 关联表 pk 主键列列名 fk 外键列列名 value 查询条件值 condition
+		查询条件 filter 过滤列列名
+	-->
+	<table name="MEDICAL_RECORDS" text="HIS病案表" related="" pk="MRID" fk=""
+		value="" condition="" filter="" query='' errorname="MEDICAL_RECORDS_ERR"
+		timeout="MEDICAL_RECORDS_TO">
+		<col name="PIDTYPE" text="" type="String" />
+		<col name="PID" text="" type="String" />
+		<col name="MRID" text="" type="String" />
+		<col name="PATIENTNAME" text="" type="String" />
+		<col name="SEX" text="" type="String" />
+		<col name="IDENTITYCARD" text="" type="String" />
+		<col name="BIRTHDAY" text="" type="Timestamp" />
+		<col name="HOSPITALCODE" text="" type="String" />
+		<col name="HOSPITALNAME" text="" type="String" />
+		<col name="ADMISSIONID" text="" type="String" />
+		<col name="ADMISSIONDATE" text="" type="Timestamp" />
+		<col name="TIMES" text="" type="String" />
+		<col name="ADMISSIONDEPTNAME" text="" type="String" />
+		<col name="TODEPTNAME" text="" type="String" />
+		<col name="DISEASESTATUS" text="" type="String" />
+		<col name="ALLERGEN" text="" type="String" />
+		<col name="ALLERGENDATE" text="" type="String" />
+		<col name="INFECTION" text="" type="String" />
+		<col name="DISEASEEXTERNALCAUSE" text="" type="String" />
+		<col name="HBSAG" text="" type="String" />
+		<col name="HCVAB" text="" type="String" />
+		<col name="HIVAB" text="" type="String" />
+		<col name="ACCURATEDATE" text="" type="Timestamp" />
+		<col name="TRANSFUSIONREACTION" text="" type="String" />
+		<col name="RESCUETIMES" text="" type="String" />
+		<col name="RESCUESUCCTIMES" text="" type="String" />
+		<col name="TREATRESULT" text="" type="String" />
+		<col name="LEAVEDATE" text="" type="Timestamp" />
+		<col name="LEAVEDEPT" text="" type="String" />
+		<col name="HOSPITALDAYS" text="" type="String" />
+		<col name="AUTOPSYIN" text="" type="String" />
+		<col name="FOLLOWUPIND" text="" type="String" />
+		<col name="PAYMODE" text="" type="String" />
+		<col name="TEACHCASEIND" text="" type="String" />
+		<col name="MRQUALITY" text="" type="String" />
+		<col name="HXBS" text="" type="String" />
+		<col name="XXBS" text="" type="String" />
+		<col name="SXJS" text="" type="String" />
+		<col name="SQXS" text="" type="String" />
+		<col name="QTXX" text="" type="String" />
+		<col name="SXYS" text="" type="String" />
+		<col name="MZYS" text="" type="String" />
+		<col name="ZYYS" text="" type="String" />
+		<col name="ZZYS" text="" type="String" />
+		<col name="ZRYS" text="" type="String" />
+		<col name="GLYS" text="" type="String" />
+		<col name="BMYS" text="" type="String" />
+		<col name="MCFG" text="" type="String" />
+		<col name="RCFH" text="" type="String" />
+		<col name="QHFH" text="" type="String" />
+		<col name="BLFH" text="" type="String" />
+		<col name="FSFH" text="" type="String" />
+		<col name="CTFH" text="" type="String" />
+		<col name="SJFH" text="" type="String" />
+	</table>
+</config>
