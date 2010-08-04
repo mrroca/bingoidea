@@ -1,0 +1,13 @@
+<database entityname="mytest">
+
+	<driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</driver>
+	<url>jdbc:sqlserver://172.25.230.101:1433;DatabaseName=SZDC_SMHFE</url>
+	<username>04A9BB78090BC5C7</username>
+	<password>32B5449A98A34CDF1A6F0AB4302C22339E2B929A117862AF</password>
+
+	<center_driver>oracle.jdbc.driver.OracleDriver</center_driver>
+	<center_url>jdbc:oracle:thin:@172.25.230.106:1521:szdc</center_url>
+	<center_username>6E93E7EE747C8B7D</center_username>
+	<center_password>7F0B739331412EED9A64B2D271497284</center_password>
+
+</database>

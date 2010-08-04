@@ -1,0 +1,6 @@
+#Thu Apr 22 16:46:57 CST 2010
+script=select top {size} * from V_ASSAYRECORD where OBSERVATIONDATETIME>'{jyrq}' order by OBSERVATIONDATETIME asc
+key={jyrq}
+arge={size}
+value=1000
+kval=2010-04-17 11\:06\:59
