@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="dataSource" class="org.logicalcobwebs.proxool.ProxoolDataSource"
+		destroy-method="ProxoolFacade.shutdown()">
+		<property name="alias" value="ProxoolPool" />
+		<property name="driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
+		<property name="driverUrl" value="jdbc:sqlserver://172.30.85.2:1433;DatabaseName=hrp260" />
+		<property name="user" value="sa" />
+		<property name="password" value="" />
+		<property name="maximumConnectionCount" value="30" />
+		<property name="minimumConnectionCount" value="10" />
+		<property name="maximumActiveTime" value="60000" />
+		<property name="prototypeCount" value="8" />
+		<property name="trace" value="true" />
+		<property name="verbose" value="true" />
+	</bean>
+	<bean id="sqlMapClient" class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="configLocation" value="classpath:config/map/sql-map-config.xml" />
+	</bean>
+	<import resource="config/map/spring-map.xml" />
+</beans>

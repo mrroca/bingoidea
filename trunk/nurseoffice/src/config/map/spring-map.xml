@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+	<!-- bean id="process" class="cn.com.bsoft.process.ProcessMessageImpl" / -->
+
+	<bean id="userdao" class="com.nurse.dao.UserDao">
+		<property name="sqlMapClient" ref="sqlMapClient" />
+	</bean>
+	<bean id="persondao" class="com.nurse.dao.PersonDao">
+		<property name="sqlMapClient" ref="sqlMapClient" />
+	</bean>
+	<bean id="patientDao" class="com.nurse.dao.PatientDao">
+		<property name="sqlMapClient" ref="sqlMapClient" />
+	</bean>
+
+</beans> 

@@ -1,0 +1,1719 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="Patient">
+	<typeAlias alias="Patient" type="com.nurse.model.Patient" />
+	<resultMap id="result" class="Patient">
+		<result property="patientname" column="BRXM" />
+		<result property="sex" column="BRXB" />
+		<result property="address" column="HKDZ" />
+		<result property="phone" column="JTDH" />
+		<result property="cfsbnumber" column="CFHM" />
+		<result property="ypmc" column="YPMC" />
+		<result property="ypgg" column="YPGG" />
+		<result property="ypdw" column="YPDW" />
+		<result property="ypjl" column="YPJL" />
+		<result property="jldw" column="JLDW" />
+		<result property="ypyf" column="YPYF" />
+		<result property="days" column="CFTS" />
+		<result property="gytj" column="GYTJ" />
+		<result property="date" column="KFRQ" />
+		<result property="optname" column="YGXM" />
+		<result property="optid" column="YGDM" />
+		<result property="total" column="TOTAL" />
+		<result property="currents" column="CURRENTS" />
+		<result property="finish" column="FINISH" />
+	</resultMap>
+	<resultMap id="appid" class="java.util.HashMap">
+	<result property="appid" column="value" />
+	</resultMap>
+	<resultMap id="allYpResult" class="java.util.HashMap">
+		<result property="ypmc" column="ypmc" />
+	</resultMap>
+	<resultMap id="count1" class="java.util.HashMap">
+	<result property="ms_ghmx" column="count1" />
+	</resultMap>
+	<resultMap id="count2" class="java.util.HashMap">
+	<result property="ms_brda" column="count2" />
+	</resultMap>
+	<resultMap id="count3" class="java.util.HashMap">
+	<result property="mzhm" column="count3" />
+	</resultMap>
+	<resultMap id="count4" class="java.util.HashMap">
+	<result property="jzxh" column="count4" />
+	</resultMap>
+	<resultMap id="count5" class="java.util.HashMap">
+	<result property="ms_survey" column="count5" />
+	</resultMap>
+	<resultMap id="sqbh" class="java.util.HashMap">
+	<result property="sqbh" column="SQBH" />
+	</resultMap>
+	<resultMap id="ksdm" class="java.util.HashMap">
+	<result property="ksdm" column="KSDM" />
+	</resultMap>
+		<resultMap id="allObservedResult" class="java.util.HashMap">
+		<result property="cfsb" column="cfsb" />
+		<result property="kssj" column="kssj" />
+		<result property="brxm" column="brxm" />
+		<result property="brxb" column="brxb" />
+		<result property="csny" column="csny" />
+		<result property="hkdz" column="hkdz" />
+		<result property="chuli" column="chuli" />
+		<result property="blfy" column="blfy" />
+		<result property="ygxm" column="ygxm" />
+		<result property="jssj" column="jssj" />
+	</resultMap>
+	<resultMap id="tprbpInfoResult" class="java.util.HashMap">
+		<result property="appid" column="APPID" />
+		<result property="sbxh" column="SBXH" />
+		<result property="brxm" column="BRXM" />
+		<result property="brxb" column="BRXB" />
+		<result property="csny" column="CSNY" />
+		<result property="lxdh" column="JTDH" />
+		<result property="tw" column="TW" />
+		<result property="mb" column="MB" />
+		<result property="hx" column="HX" />
+		<result property="ssy" column="SSY" />
+		<result property="szy" column="SZY" />
+		<result property="jlsj" column="JLSJ" />
+		<result property="clr" column="CLR" />
+	</resultMap>
+	
+	<resultMap id="tprbpInfoResult2" class="java.util.HashMap">
+		<result property="appid" column="APPID" />
+		<result property="sbxh" column="SBXH" />
+		<result property="mzhm" column="MZHM" />
+		<result property="brxm" column="BRXM" />
+		<result property="brxb" column="BRXB" />
+		<result property="csny" column="CSNY" />
+		<result property="jtdz" column="JTDZ" />
+		<result property="lxdh" column="JTDH" />
+		<result property="gms" column="GMS" />
+		<result property="gmwz" column="GMWZ" />
+		<result property="hy" column="HY" />
+		<result property="xx" column="XXDM" />
+		<result property="brxz" column="BRXZ" />
+		<result property="mzzd" column="MZZD" />
+		<result property="tw" column="TW" />
+		<result property="mb" column="MB" />
+		<result property="hx" column="HX" />
+		<result property="ssy" column="SSY" />
+		<result property="szy" column="SZY" />
+		<result property="sflsry" column="SFLSRY" />
+		<result property="sfyqry" column="SFYQRY" />
+		<result property="clr" column="CLR" />
+	</resultMap>
+	
+	<resultMap id="cfresult" class="java.util.HashMap">
+		<result property="cfsb" column="CFSB" />
+		<result property="cfhm" column="CFHM" />
+		<result property="fphm" column="FPHM" />
+		<result property="brxm" column="BRXM" />
+		<result property="brxb" column="BRXB" />
+		<result property="ksmc" column="KSMC" />
+		<result property="ysxm" column="YSXM" />
+		<result property="kfrq" column="KFRQ" />
+		<result property="total" column="TOTAL" />
+		<result property="currents" column="CURRENTS" />
+	</resultMap>
+	<resultMap id="cfmxresult" class="java.util.HashMap">
+		<result property="ypzh" column="YPZH" />
+		<result property="ypmc" column="YPMC" />
+		<result property="ypgg" column="YPGG" />
+		<result property="ypdw" column="YPDW" />
+		<result property="ypjl" column="YPJL" />
+		<result property="jldw" column="JLDW" />
+		<result property="pc" column="PC" />
+		<result property="ypyf" column="YPYF" />
+		<result property="kfrq" column="KFRQ" />
+		<result property="ycjl" column="YCJL" />
+		<result property="yyts" column="YYTS" />
+	</resultMap>
+	<resultMap id="wpcfmxresult" class="java.util.HashMap">
+		<result property="ypzh" column="YPZH" />
+		<result property="ypmc" column="YPMC" />
+		<result property="ypgg" column="YPGG" />
+		<result property="ypdw" column="YPDW" />
+		<result property="ypjl" column="YPJL" />
+		<result property="jldw" column="JLDW" />
+		<result property="pc" column="PC" />
+		<result property="ypyf" column="YPYF" />
+		<result property="kfrq" column="KFRQ" />
+		<result property="yyts" column="YYTS" />
+	</resultMap>
+	<resultMap id="wpbrcfmxresult" class="java.util.HashMap">
+		<result property="ztbs" column="ZTBS" />
+		<result property="ypmc" column="YPMC" />
+		<result property="ypgg" column="YPGG" />
+		<result property="ypdw" column="YPDW" />
+		<result property="ypjl" column="YPJL" />
+		<result property="jldw" column="JLDW" />
+		<result property="pc" column="PC" />
+		<result property="ypyf" column="YPYF" />
+		<result property="kfrq" column="KFRQ" />
+		<result property="yyts" column="DAYS" />
+	</resultMap>
+	<resultMap id="basicinforesult" class="java.util.HashMap">
+		<result property="cfhm" column="CFHM" />
+		<result property="brxm" column="BRXM" />
+		<result property="brxb" column="BRXB" />
+		<result property="jtdz" column="JTDZ" />
+		<result property="lxdh" column="LXDH" />
+	</resultMap>
+	<resultMap id="wpbrbasicinfo" class="java.util.HashMap">
+		<result property="id" column="ID" />
+		<result property="brxm" column="BRXM" />
+		<result property="brxb" column="BRXB" />
+		<result property="jtdz" column="JTDZ" />
+		<result property="lxdh" column="LXDH" />
+		<result property="lrrq" column="LRRQ" />
+		<result property="lczd" column="LCZD" />
+	</resultMap>
+	<resultMap id="druginforesult" class="java.util.HashMap">
+		<result property="ypxh" column="YPXH" />
+		<result property="ypmc" column="YPMC" />
+		<result property="ypgg" column="YPGG" />
+		<result property="ypdw" column="YPDW" />
+		<result property="ypjl" column="YPJL" />
+		<result property="jldw" column="JLDW" />
+	</resultMap>
+	<resultMap id="jdresult" class="java.util.HashMap">
+		<result property="lczdmc" column="LCZDMC" />
+	</resultMap>
+	<resultMap id="nurseresult" class="java.util.HashMap">
+		<result property="username" column="USERNAME" />
+		<result property="name" column="NAME" />
+	</resultMap>
+	<resultMap id="patientallcfresult" class="java.util.HashMap">
+		<result property="ybkh" column="YBKH" />
+		<result property="id" column="ID" />
+		<result property="brxm" column="BRXM" />
+		<result property="brxb" column="BRXB" />
+		<result property="hkdz" column="HKDZ" />
+		<result property="jtdh" column="JTDH" />
+		<result property="cfsb" column="CFSB" />
+		<result property="cfhm" column="CFHM" />
+		<result property="fphm" column="FPHM" />
+		<result property="ksmc" column="KSMC" />
+		<result property="ysxm" column="YSXM" />
+		<result property="kfrq" column="KFRQ" />
+		<result property="total" column="TOTAL" />
+		<result property="currents" column="CURRENTS" />
+	</resultMap>
+	<resultMap id="patientcurrents" class="java.util.HashMap">
+		<result property="currents" column="CURRENTS" />
+		<result property="total" column="TOTAL" />
+		<result property="markdate" column="MARKDATE" />
+		<result property="today" column="TODAY" />
+	</resultMap>
+	<resultMap id="patientname" class="java.util.HashMap">
+		<result property="xmpy" column="XMPY" />
+		<result property="brxm" column="BRXM" />
+	</resultMap>
+	<resultMap id="patientbasic" class="java.util.HashMap">
+		<result property="brxm" column="BRXM" />
+		<result property="brxb" column="brxb" />
+		<result property="csny" column="csny" />
+		<result property="hkdz" column="hkdz" />
+		<result property="jtdh" column="jtdh" />
+		<result property="ybkh" column="ybkh" />
+	</resultMap>
+	<resultMap id="wpygcjlforesult" class="java.util.HashMap">
+		<result property="wpygcjlid" column="WPYGCJLID" />
+		<result property="username" column="USERNAME" />
+		<result property="blfy" column="BLFY" />
+		<result property="blfynr" column="BLFYNR" />
+		<result property="chuli" column="CHULI" />
+	</resultMap>
+	<resultMap id="wpybasicinforesult" class="java.util.HashMap">
+		<result property="brxm" column="BRXM" />
+		<result property="brxb" column="BRXB" />
+		<result property="jtdz" column="JTDZ" />
+		<result property="lxdh" column="LXDH" />
+		<result property="lczd" column="LCZD" />
+	</resultMap>
+	<resultMap id="mzgcwpypatientlist" class="java.util.HashMap">
+		<result property="id" column="ID" />
+		<result property="cfid" column="CFID" />
+		<result property="brxm" column="BRXM" />
+		<result property="brxb" column="BRXB" />
+		<result property="jtdz" column="JTDZ" />
+		<result property="lxdh" column="LXDH" />
+		<result property="czrq" column="MARKDATE" />
+		<result property="lczd" column="LCZD" />
+	</resultMap>
+	<resultMap id="gcjlforesult" class="java.util.HashMap">
+		<result property="gcjlid" column="GCJLID" />
+		<result property="username" column="USERNAME" />
+		<result property="blfy" column="BLFY" />
+		<result property="blfynr" column="BLFYNR" />
+		<result property="chuli" column="CHULI" />
+	</resultMap>
+	<resultMap id="mzgcpatientlist" class="java.util.HashMap">
+		<result property="id" column="ID" />
+		<result property="cfsb" column="CFSB" />
+		<result property="brxm" column="BRXM" />
+		<result property="brxb" column="BRXB" />
+		<result property="jtdz" column="JTDZ" />
+		<result property="lxdh" column="JTDH" />
+		<result property="czrq" column="MARKDATE" />
+	</resultMap>
+	<resultMap id="visitservicemap" class="java.util.HashMap">
+		<result property="id" column="ID" />
+		<result property="ybkh" column="YBKH" />
+		<result property="name" column="NAME" />
+		<result property="sex" column="SEX" />
+		<result property="address" column="ADDRESS" />
+		<result property="phone" column="PHONE" />
+		<result property="content" column="CONTENT" />
+		<result property="userid" column="USERID" />
+		<result property="markdate" column="MARKDATE" />
+		<result property="kind" column="KIND" />
+		<result property="optuser" column="YGXM" />
+	</resultMap>
+	<resultMap id="treatmentresult" class="java.util.HashMap">
+		<result property="treatmentid" column="TREATMENTID" />
+		<result property="ybkh" column="YBKH" />
+		<result property="brxm" column="BRXM" />
+		<result property="brnl" column="BRNL" />
+		<result property="brhy" column="BRHY" />
+		<result property="gms" column="GMS" />
+		<result property="xx" column="XX" />
+		<result property="mzzd" column="MZZD" />
+		<result property="description" column="DESCRIPTION" />
+		<result property="brxb" column="BRXB" />
+		<result property="hkdz" column="HKDZ" />
+		<result property="phone" column="PHONE" />
+		<result property="username" column="USERNAME" />
+		<result property="markdate" column="MARKDATE" />
+		<result property="jc" column="JC" />
+		<result property="czmc" column="CZMC" />
+		<result property="name" column="NAME" />
+	</resultMap>
+	<resultMap id="sanitationresult" class="java.util.HashMap">
+		<result property="sanitationid" column="SANITATIONID" />
+		<result property="username" column="USERNAME" />
+		<result property="markdate" column="MARKDATE" />
+		<result property="name" column="NAME" />
+		<result property="sanitationcontent" column="SANITATIONCONTENT" />
+		<result property="sanitationcomplete" column="SANITATIONCOMPLETE" />
+	</resultMap>
+	<resultMap id="personbasicinforesult" class="java.util.HashMap">
+		<result property="brxm" column="BRXM" />
+		<result property="brxb" column="BRXB" />
+		<result property="hkdz" column="HKDZ" />
+		<result property="lxdh" column="LXDH" />
+		<result property="sfzh" column="SFZH" />
+		<result property="ybkh" column="MZHM" />
+		<result property="appid" column="APPID" />
+	</resultMap>
+	<resultMap id="visityy" class="java.util.HashMap">
+		<result property="id" column="ID" />
+		<result property="brxm" column="BRXM" />
+		<result property="brxb" column="BRXB" />
+		<result property="jtdz" column="JTDZ" />
+		<result property="lxdh" column="LXDH" />
+		<result property="yysj" column="YYSJ" />
+		<result property="ybkh" column="YBKH" />
+		<result property="remark" column="REMARK" />
+		<result property="lrrq" column="LRRQ" />
+		<result property="kind" column="KIND" />
+		<result property="flag" column="FLAG" />
+	</resultMap>
+	<select id="getTreatmentAll" parameterClass="java.util.Map"
+		resultMap="treatmentresult">
+		select
+			a.id as TREATMENTID,
+			a.ybkh as YBKH,
+			a.brnl as BRNL,
+			a.brhy as BRHY,
+			a.gms as GMS,
+			a.xx as XX,
+			a.mzzd as MZZD,
+			a.description as
+			DESCRIPTION,
+			a.name as
+			BRXM,
+			a.sex as BRXB,
+			a.address as HKDZ,
+			a.phone
+			as
+			PHONE,
+			a.userid as
+			USERNAME,
+			ISNULL(convert(varchar(10),a.markdate,23),'') as MARKDATE,
+			a.jc as JC,
+			a.czmc
+			as CZMC,
+			b.ygxm as NAME
+		from 
+			ms_treatment a,
+			gy_ygdm b
+		where
+			a.userid = b.ygdm 
+		order by a.markdate desc
+	</select>
+	<select id="getSanitationAll" parameterClass="java.util.Map"
+		resultMap="sanitationresult">
+		select
+			a.id as SANITATIONID,
+			a.userid as USERNAME,
+			ISNULL(convert(varchar(10),a.markdate,23),'') as MARKDATE,
+			a.sanitationcontent as SANITATIONCONTENT,
+			a.sanitationcomplete as
+			SANITATIONCOMPLETE,
+			b.ygxm as NAME
+		from 
+			ms_sanitation a,
+			gy_ygdm b
+		where
+			a.userid = b.ygdm 
+		order by a.markdate desc
+	</select>
+	<select id="getpatientcfall" parameterClass="java.util.Map" resultMap="patientallcfresult">
+		select 
+			a.YBKH AS YBKH,
+			A.ID AS ID,
+			A.BRXM AS BRXM,
+			A.BRXB AS BRXB,
+			A.HKDZ AS HKDZ,
+			A.JTDH AS JTDH,
+			A.CFSB AS CFSB,
+			A.CFHM AS CFHM,
+			A.FPHM AS FPHM,
+			A.KSMC AS KSMC,
+			A.YSXM AS YSXM,
+			A.KFRQ AS KFRQ,
+			ISNULL(B.TOTAL,'') AS TOTAL,
+			ISNULL(B.CURRENTS,'') AS CURRENTS
+		from (
+			select distinct
+				ISNULL(e.mzhm,'') as YBKH,
+				ISNULL(e.id,'')   as ID,
+				ISNULL(e.brxm,'') as BRXM,
+				e.brxb as BRXB,
+				ISNULL(e.hkdz,'') as HKDZ,
+				ISNULL(e.jtdh,'') as JTDH,
+				ISNULL(a.cfsb,'') as CFSB,
+				ISNULL(a.cfhm,'') as CFHM,
+				ISNULL(a.fphm,'') as FPHM,
+				ISNULL(d.ksmc,'') as KSMC,
+				ISNULL(c.ygxm,'') as YSXM,
+				ISNULL(convert(varchar(10),a.kfrq,23),'') as KFRQ
+			from 
+				ms_brda e,
+				ms_cf01 a,
+				gy_ygdm c,
+				gy_ksdm d,
+				ms_cf02 f 
+			where 
+				e.id = a.id and
+				a.ysdm=c.ygdm and 
+				a.ksdm=d.ksdm and
+				a.cfsb=f.cfsb and
+				a.kfrq>convert(char(10),getdate()-2,120) and
+				f.gytj in ('4','5','401','403','404','405','406','407','601','602','603','604','612','902')
+		) a 
+		left join 
+			cf_cfjob b 
+		on 
+			a.cfsb=b.cfsb 
+		order by a.kfrq desc
+	</select>
+	<select id="getpatientwclcfall" parameterClass="java.util.Map" resultMap="patientallcfresult">
+		select 
+			a.YBKH AS YBKH,
+			A.ID AS ID,
+			A.BRXM AS BRXM,
+			A.BRXB AS BRXB,
+			A.HKDZ AS HKDZ,
+			A.JTDH AS JTDH,
+			A.CFSB AS CFSB,
+			A.CFHM AS CFHM,
+			A.FPHM AS FPHM,
+			A.KSMC AS KSMC,
+			A.YSXM AS YSXM,
+			A.KFRQ AS KFRQ,
+			ISNULL(B.TOTAL,'') AS TOTAL,
+			ISNULL(B.CURRENTS,'') AS CURRENTS
+		from (
+			select distinct
+				ISNULL(e.mzhm,'') as YBKH,
+				ISNULL(e.id,'')   as ID,
+				ISNULL(e.brxm,'') as BRXM,
+				e.brxb as BRXB,
+				ISNULL(e.hkdz,'') as HKDZ,
+				ISNULL(e.jtdh,'') as JTDH,
+				ISNULL(a.cfsb,'') as CFSB,
+				ISNULL(a.cfhm,'') as CFHM,
+				ISNULL(a.fphm,'') as FPHM,
+				ISNULL(d.ksmc,'') as KSMC,
+				ISNULL(c.ygxm,'') as YSXM,
+				ISNULL(convert(varchar(10),a.kfrq,23),'') as KFRQ
+			from 
+				ms_brda e,
+				ms_cf01 a,
+				gy_ygdm c,
+				gy_ksdm d,
+				ms_cf02 f 
+			where 
+				e.id = a.id and
+				a.ysdm=c.ygdm and 
+				a.ksdm=d.ksdm and
+				a.cfsb=f.cfsb and
+				a.kfrq>convert(char(10),getdate()-5,120) and
+				f.gytj in ('4','5','401','403','404','405','406','407','601','602','603','604','612','902')
+		) a 
+		left join 
+			cf_cfjob b 
+		on 
+			a.cfsb=b.cfsb and b.total is null
+		order by a.kfrq desc
+	</select>
+	<select id="getpatientyclcfall" parameterClass="java.util.Map" resultMap="patientallcfresult">
+		select 
+			a.YBKH AS YBKH,
+			A.ID AS ID,
+			A.BRXM AS BRXM,
+			A.BRXB AS BRXB,
+			A.HKDZ AS HKDZ,
+			A.JTDH AS JTDH,
+			A.CFSB AS CFSB,
+			A.CFHM AS CFHM,
+			A.FPHM AS FPHM,
+			A.KSMC AS KSMC,
+			A.YSXM AS YSXM,
+			A.KFRQ AS KFRQ,
+			ISNULL(B.TOTAL,'') AS TOTAL,
+			ISNULL(B.CURRENTS,'') AS CURRENTS
+		from (
+			select distinct
+				ISNULL(e.mzhm,'') as YBKH,
+				ISNULL(e.id,'')   as ID,
+				ISNULL(e.brxm,'') as BRXM,
+				e.brxb as BRXB,
+				ISNULL(e.hkdz,'') as HKDZ,
+				ISNULL(e.jtdh,'') as JTDH,
+				ISNULL(a.cfsb,'') as CFSB,
+				ISNULL(a.cfhm,'') as CFHM,
+				ISNULL(a.fphm,'') as FPHM,
+				ISNULL(d.ksmc,'') as KSMC,
+				ISNULL(c.ygxm,'') as YSXM,
+				ISNULL(convert(varchar(10),a.kfrq,23),'') as KFRQ
+			from 
+				ms_brda e,
+				ms_cf01 a,
+				gy_ygdm c,
+				gy_ksdm d,
+				ms_cf02 f 
+			where 
+				e.id = a.id and
+				a.ysdm=c.ygdm and 
+				a.ksdm=d.ksdm and
+				a.cfsb=f.cfsb and
+				a.kfrq>convert(char(10),getdate()-5,120) and
+				f.gytj in ('4','5','401','403','404','405','406','407','601','602','603','604','612','902')
+			) a ,cf_cfjob b 
+			where a.cfsb=b.cfsb and b.total is not null
+
+		order by a.kfrq desc
+	</select>
+	<select id="getzfpatientcfall" parameterClass="java.util.Map" resultMap="patientallcfresult">
+		<![CDATA[ 
+			select 
+				a.YBKH AS YBKH,
+				A.ID AS ID,
+				A.BRXM AS BRXM,
+				A.BRXB AS BRXB,
+				A.HKDZ AS HKDZ,
+				A.JTDH AS JTDH,
+				A.CFSB AS CFSB,
+				A.CFHM AS CFHM,
+				A.FPHM AS FPHM,
+				A.KSMC AS KSMC,
+				A.YSXM AS YSXM,
+				A.KFRQ AS KFRQ,
+				ISNULL(B.TOTAL,'') AS TOTAL,
+				ISNULL(B.CURRENTS,'') AS CURRENTS
+			from (
+				select distinct
+					ISNULL(e.mzhm,'') as YBKH,
+					ISNULL(e.id,'')   as ID,
+					ISNULL(e.brxm,'') as BRXM,
+					e.brxb as BRXB,
+					ISNULL(e.hkdz,'') as HKDZ,
+					ISNULL(e.jtdh,'') as JTDH,
+					ISNULL(a.cfsb,'') as CFSB,
+					ISNULL(a.cfhm,'') as CFHM,
+					ISNULL(a.fphm,'') as FPHM,
+					ISNULL(d.ksmc,'') as KSMC,
+					ISNULL(c.ygxm,'') as YSXM,
+					ISNULL(convert(varchar(10),a.kfrq,23),'') as KFRQ
+				from 
+					ms_brda e,
+					ms_cf01 a,
+					gy_ygdm c,
+					gy_ksdm d,
+					ms_cf02 f 
+				where 
+					len(e.mzhm)<15 and
+					e.id = a.id and
+					a.ysdm=c.ygdm and 
+					a.ksdm=d.ksdm and
+					a.cfsb=f.cfsb and
+					a.kfrq>convert(char(10),getdate()-15,120) and
+					f.gytj in ('4','5','401','403','404','405','406','407','601','602','603','604','612','902')
+			) a left join 
+				cf_cfjob b 
+			on 
+				a.cfsb=b.cfsb 
+			order by a.kfrq desc
+		]]> 
+	</select>
+	<select id="getpatientcfbycond" parameterClass="java.util.Map" resultMap="cfresult">
+		select 
+			a.YBKH AS YBKH,
+			A.ID AS ID,
+			A.BRXM AS BRXM,
+			A.BRXB AS BRXB,
+			A.HKDZ AS HKDZ,
+			A.JTDH AS JTDH,
+			A.CFSB AS CFSB,
+			A.CFHM AS CFHM,
+			A.FPHM AS FPHM,
+			A.KSMC AS KSMC,
+			A.YSXM AS YSXM,
+			A.KFRQ AS KFRQ,
+			ISNULL(B.TOTAL,'') AS TOTAL,
+			ISNULL(B.CURRENTS,'') AS CURRENTS
+		from (
+			select distinct
+				ISNULL(e.mzhm,'') as YBKH,
+				ISNULL(e.id,'')   as ID,
+				ISNULL(e.brxm,'') as BRXM,
+				e.brxb as BRXB,
+				ISNULL(e.hkdz,'') as HKDZ,
+				ISNULL(e.jtdh,'') as JTDH,
+				ISNULL(a.cfsb,'') as CFSB,
+				ISNULL(a.cfhm,'') as CFHM,
+				ISNULL(a.fphm,'') as FPHM,
+				ISNULL(d.ksmc,'') as KSMC,
+				ISNULL(c.ygxm,'') as YSXM,
+				ISNULL(convert(varchar(10),a.kfrq,23),'') as KFRQ
+			from 
+				ms_brda e,
+				ms_cf01 a,
+				gy_ygdm c,
+				gy_ksdm d,
+				ms_cf02 f 
+			where 
+				e.id = a.id and
+				a.ysdm=c.ygdm and 
+				a.ksdm=d.ksdm and
+				a.cfsb=f.cfsb and
+				f.gytj in ('4','5','401','403','404','405','406','407','601','602','603','604','612','902') and 
+				e.mzhm=#ybkh# 
+		) a left join 
+			cf_cfjob b 
+		on 
+			a.cfsb=b.cfsb 
+		order by a.kfrq desc
+	</select>
+	<select id="getpatientcfmxbycond" parameterClass="java.util.Map" resultMap="cfmxresult">
+		select 
+			a.ypzh as YPZH ,
+			ISNULL(b.ypmc,'') as YPMC,
+			ISNULL(B.YPGG,'') AS YPGG,
+			ISNULL(B.YPDW,'') AS YPDW,
+			ISNULL(B.YPJL,'') AS YPJL,
+			ISNULL(B.JLDW,'') AS JLDW,
+			a.ycjl AS YCJL,
+			ISNULL(A.YPYF,'') AS PC,
+			ISNULL(d.name,'') AS YPYF,
+			ISNULL(convert(varchar(10),C.kfrq,23),'') as KFRQ ,
+			ISNULL(a.YYTS,'') AS YYTS
+		from 
+			ms_cf02 a , 
+			yk_typk b ,
+			MS_CF01 C ,
+			zy_ypyf d
+		where 
+			a.ypxh=b.ypxh AND 
+			A.CFSB=C.CFSB and 
+			a.GYTJ=d.code and
+			a.gytj in ('4','5','401','403','404','405','406','407','601','602','603','604','612','902') and
+			a.cfsb=#cfsb# order by a.ypzh asc
+	</select>
+	<select id="getwppatientcfmxbycond" parameterClass="java.util.Map" resultMap="wpcfmxresult">
+		select 
+			ISNULL(A.ztbs,'') as YPZH ,
+			ISNULL(A.ypmc,'') as YPMC,
+			ISNULL(A.YPGG,'') AS YPGG,
+			ISNULL(A.YPDW,'') AS YPDW,
+			ISNULL(A.YPJL,'') AS YPJL,
+			ISNULL(A.JLDW,'') AS JLDW,
+			ISNULL(A.PC,'') AS PC,
+			ISNULL(B.NAME,'') AS YPYF,
+			ISNULL(convert(varchar(10),A.kfrq,23),'') as KFRQ,
+			ISNULL(A.DAYS,'') AS YYTS
+		from 
+			MZ_WPBRXX A ,ZY_YPYF B
+		where 
+			A.WPBRID=#cfsb# AND
+			A.YPYF=B.CODE
+	</select>
+	<select id="printpatientsydbycond" parameterClass="java.util.Map" resultMap="cfmxresult">
+		select 
+			ISNULL(b.ypmc,'') as YPMC,
+			ISNULL(B.YPGG,'') AS YPGG,
+			ISNULL(B.YPDW,'') AS YPDW,
+			ISNULL(B.YPJL,'') AS YPJL,
+			ISNULL(B.JLDW,'') AS JLDW,
+			a.ycjl AS YCJL,
+			ISNULL(A.YPYF,'') AS PC,
+			ISNULL(d.name,'') AS YPYF,
+			ISNULL(convert(varchar(10),C.kfrq,23),'') as KFRQ 
+		from 
+			ms_cf02 a , 
+			yk_typk b ,
+			MS_CF01 C ,
+			zy_ypyf d
+		where 
+			a.ypxh=b.ypxh AND 
+			A.CFSB=C.CFSB and 
+			a.GYTJ=d.code and
+			a.gytj in ('4','5','401','403','404','405','406','407','601','602','603','604','612','902') and
+			a.cfsb=#cfsb#
+	</select>
+	<select id="getpatientbasicinfobycond" parameterClass="java.util.Map" resultMap="basicinforesult">
+		select
+			ISNULL(b.cfhm,'') as CFHM,
+			ISNULL(a.brxm,'') as BRXM,
+			a.brxb as BRXB,
+			ISNULL(a.hkdz,'') AS JTDZ,
+			ISNULL(a.jtdh,'') AS LXDH
+		from 
+			ms_brda a,ms_cf01 b
+		where 
+			a.id = b.id and
+			b.cfsb=#cfsb#
+	</select>
+	<select id="getwppatientbasicinfobycond" parameterClass="java.util.Map" resultMap="basicinforesult">
+		select
+			ISNULL(A.id,'') as CFHM,
+			ISNULL(A.brxm,'') as BRXM,
+			ISNULL(A.brxb,'') as BRXB,
+			ISNULL(A.jtdz,'') AS JTDZ,
+			ISNULL(A.lxdh,'') AS LXDH
+		from 
+			MZ_WPBR A
+		where 
+			A.ID=#cfsb#
+	</select>
+	<select id="getwppatientbasicinfolist" parameterClass="java.util.Map" resultMap="wpbrbasicinfo">
+		SELECT 
+			ISNULL(A.ID,'') AS ID,
+			ISNULL(A.BRXM,'') AS BRXM,
+			ISNULL(A.BRXB,'') AS BRXB,
+			ISNULL(A.LXDH,'') AS LXDH,
+			ISNULL(A.JTDZ,'') AS JTDZ,
+			ISNULL(A.LCZD,'') AS LCZD,
+			ISNULL(convert(varchar(10),A.LRRQ,23),'') AS LRRQ
+		FROM 
+			MZ_WPBR A
+		ORDER BY LRRQ DESC
+	</select>
+	<select id="getwppatientbasicinfobyid" parameterClass="java.util.Map" resultMap="wpbrbasicinfo">
+		SELECT 
+			ISNULL(A.ID,'') AS ID,
+			ISNULL(A.BRXM,'') AS BRXM,
+			ISNULL(A.BRXB,'') AS BRXB,
+			ISNULL(A.LXDH,'') AS LXDH,
+			ISNULL(A.JTDZ,'') AS JTDZ,
+			ISNULL(A.LCZD,'') AS LCZD,
+			ISNULL(convert(varchar(10),A.LRRQ,23),'') AS LRRQ
+		FROM 
+			MZ_WPBR A
+		WHERE A.ID=#id#
+		ORDER BY LRRQ DESC
+	</select>
+	<select id="getwppatientxxbycond" parameterClass="java.util.Map" resultMap="wpbrcfmxresult">
+		SELECT 
+			ISNULL(A.YPMC,'') AS YPMC,
+			ISNULL(A.YPGG,'') AS YPGG,
+			ISNULL(A.YPDW,'') AS YPDW,
+			ISNULL(A.YPJL,'') AS YPJL,
+			ISNULL(A.JLDW,'') AS JLDW,
+			ISNULL(A.PC,'') AS PC,
+			ISNULL(A.YPYF,'') AS YPYFCODE,
+			ISNULL(B.NAME,'') AS YPYF,
+			ISNULL(convert(varchar(10),A.LRRQ,23),'') AS LRRQ,
+			A.WPBRID AS WPBRID,
+			ISNULL(A.YPXH,'') AS YPXH,
+			ISNULL(convert(varchar(10),A.KFRQ,23),'') AS KFRQ,
+			ISNULL(A.ZTBS,'') AS ZTBS,
+			ISNULL(A.DAYS,'') AS DAYS
+		FROM 
+			MZ_WPBRXX A ,
+			ZY_YPYF B
+		WHERE 
+			A.WPBRID=#id# AND
+			A.YPYF=B.CODE
+	</select>
+	<select id="getpatientbasicinfobycard" parameterClass="java.util.Map" resultMap="personbasicinforesult">
+		select 
+			ISNULL(brxm,'') as BRXM,
+			brxb as BRXB,
+			ISNULL(hkdz,'') as HKDZ,
+			ISNULL(jtdh,'') as LXDH,
+			ISNULL(sfzh,'') as SFZH,
+			ISNULL(mzhm,'') as MZHM,
+			ID AS APPID
+		from 
+			ms_brda 
+		where 
+			mzhm=#ybkh#
+	</select>
+	<select id="getpatientzdinfobycond" parameterClass="java.util.Map" resultMap="jdresult">
+		SELECT 
+			ISNULL(E.NAME,'') AS LCZDMC 
+		FROM 
+			MS_CF01 A,
+			YS_MZ_BCJL C,
+			YS_MZ_JBZD D,
+			GY_JBBM E 
+		WHERE 
+			A.ID=C.BRBH AND 
+			a.jzxh=c.jzxh and
+			C.JZXH=D.JZXH AND 
+			D.JBBH=E.CODE AND 
+			A.CFSB=#cfsb#
+	</select>
+	<select id="getperson" parameterClass="java.util.Map" resultMap="nurseresult">
+		select 
+			a.userid as USERNAME,
+			b.ygxm as NAME 
+		from 
+			gy_nursegroup a,
+			gy_ygdm b 
+		where 
+			a.userid=b.ygdm and 
+			a.validflag='1' and 
+			a.userid!='bssa'
+	</select>
+	<select id="getpatientcurrents" parameterClass="java.util.Map" resultMap="patientcurrents">
+		SELECT 
+			a.total as TOTAL,
+			a.currents as CURRENTS,
+			ISNULL(convert(varchar(10),a.markdate,23),'') as MARKDATE,
+			CONVERT(varchar(10), GETDATE(), 23) as TODAY
+		FROM 
+			CF_CFJOB a
+		WHERE 
+			a.cfsb=#cfsb#
+	</select>
+	<select id="getwppatientcurrents" parameterClass="java.util.Map" resultMap="patientcurrents">
+		SELECT 
+			a.total as TOTAL,
+			a.currents as CURRENTS,
+			ISNULL(convert(varchar(10),a.markdate,23),'') as MARKDATE,
+			CONVERT(varchar(10), GETDATE(), 23) as TODAY
+		FROM 
+			CF_WPCFJOB a
+		WHERE 
+			a.cfid=#cfsb#
+	</select>
+	<select id="clinicservicepatientlist" parameterClass="java.util.Map" resultMap="mzgcpatientlist">
+		select
+			ISNULL(a.id,'') as ID,
+			ISNULL(a.cfsb,'') as CFSB,
+			ISNULL(b.brxm,'') as BRXM,
+			c.brxb as BRXB,
+			ISNULL(c.hkdz,'') as JTDZ,
+			ISNULL(convert(varchar(10),a.lrrq,23),'') as MARKDATE,
+			ISNULL(c.jtdh,'') as JTDH
+		from 
+			mz_gcjl a,
+			ms_cf01 b,
+			ms_brda c
+		where 
+			a.cfsb=b.cfsb and 
+			b.id=c.id
+		order by a.lrrq desc
+	</select>
+	<select id="getvisitservice" parameterClass="java.util.Map" resultMap="visitservicemap">
+		select 
+			a.id AS ID,
+			ISNULL(a.ybkh,'') AS YBKH,
+			ISNULL(a.name,'') AS NAME,
+			a.sex AS SEX,
+			ISNULL(a.address,'') AS ADDRESS,
+			ISNULL(a.phone,'') AS PHONE,
+			ISNULL(a.content,'') AS CONTENT,
+			ISNULL(a.userid,'') AS USERID,
+			ISNULL(a.kind,'') AS KIND,
+			ISNULL(convert(varchar(10),a.markdate,23),'') AS MARKDATE,
+			ISNULL(b.ygxm,'') AS YGXM
+		from 
+			visitservice a,
+			gy_ygdm b 
+		where 
+			a.userid=b.ygdm
+	</select>
+	<select id="getvisitservicebycond" parameterClass="java.util.Map" resultMap="visitservicemap">
+		select 
+			a.id AS ID,
+			ISNULL(a.ybkh,'') AS YBKH,
+			ISNULL(a.name,'') AS NAME,
+			a.sex AS SEX,
+			ISNULL(a.address,'') AS ADDRESS,
+			ISNULL(a.phone,'') AS PHONE,
+			ISNULL(a.content,'') AS CONTENT,
+			ISNULL(a.userid,'') AS USERID,
+			ISNULL(a.kind,'') AS KIND,
+			ISNULL(convert(varchar(10),a.markdate,23),'') AS MARKDATE,
+			ISNULL(b.ygxm,'') AS YGXM
+		from 
+			visitservice a,
+			gy_ygdm b 
+		where 
+			a.userid=b.ygdm and 
+			a.id=#id#
+	</select>
+	<select id="getpatientname" parameterClass="java.util.Map" resultMap="patientname">
+		select 
+			xmpy,
+			brxm 
+		from 
+			ms_brda_view 
+		where 
+			xmpy like '$xmpy$%'
+	</select>
+	<select id="getdruginfobypydm" parameterClass="java.util.Map" resultMap="druginforesult">
+		SELECT 
+			YPXH as YPXH,
+			ISNULL(PYDM,'') as PYDM,
+			ISNULL(WBDM,'') as WBDM,
+			ISNULL(YPMC,'') as YPMC,
+			ISNULL(YPGG,'') as YPGG,
+			ISNULL(YPDW,'') as YPDW,
+			ISNULL(YPJL,'') as YPJL,
+			ISNULL(JLDW,'') as JLDW
+		FROM 
+			YK_TYPK_WPY 
+		WHERE PYDM like '$pydm$%'
+	</select>
+	<select id="getpatientbyname" parameterClass="java.util.Map" resultMap="patientbasic">
+		select 
+			ISNULL(brxm,'') as brxm,
+			brxb as brxb,
+			ISNULL(convert(varchar(10),csny,23),'') as csny,
+			ISNULL(hkdz,'') as hkdz,ISNULL(jtdh,'') as jtdh , 
+			ISNULL(mzhm,'') as ybkh 
+		from 
+			ms_brda 
+		where 
+			brxm 
+		like  '$brxm$%'
+	</select>
+	<select id="getvisityy" parameterClass="java.util.Map" resultMap="visityy">
+		SELECT 
+			ISNULL(ID,'') AS ID ,
+			ISNULL(BRXM,'') AS BRXM,
+			ISNULL(BRXB,'') AS BRXB,
+			ISNULL(LXDH,'') AS LXDH,
+			ISNULL(convert(varchar(10),YYSJ,23),'') AS YYSJ,
+			ISNULL(JTDZ,'') AS JTDZ,
+			ISNULL(REMARK,'') AS REMARK,
+			ISNULL(YBKH,'') AS YBKH,
+			ISNULL(convert(varchar(10),LRRQ,23),'') AS LRRQ,
+			ISNULL(KIND,'') AS KIND,
+			ISNULL(FLAG,'') AS FLAG
+		FROM 
+			MZ_SMFWYY 
+		WHERE 
+			FLAG='1' AND 
+			YYSJ>=convert(char(10),getdate(),120)
+		ORDER BY YYSJ ASC
+	</select>
+	<select id="getvisityybycond" parameterClass="java.util.Map" resultMap="visityy">
+		SELECT 
+			ISNULL(ID,'') AS ID ,
+			ISNULL(BRXM,'') AS BRXM,
+			ISNULL(BRXB,'') AS BRXB,
+			ISNULL(LXDH,'') AS LXDH,
+			ISNULL(convert(varchar(10),YYSJ,23),'') AS YYSJ,
+			ISNULL(JTDZ,'') AS JTDZ,
+			ISNULL(REMARK,'') AS REMARK,
+			ISNULL(YBKH,'') AS YBKH,
+			ISNULL(convert(varchar(10),LRRQ,23),'') AS LRRQ,
+			ISNULL(KIND,'') AS KIND,
+			ISNULL(FLAG,'') AS FLAG
+		FROM 
+			MZ_SMFWYY 
+		WHERE 
+			FLAG='1' AND 
+			convert(varchar(10),YYSJ,23)=#yysj#
+		ORDER BY YYSJ ASC
+	</select>
+	<select id="getvisityybytoday" parameterClass="java.util.Map" resultMap="visityy">
+		SELECT 
+			ISNULL(ID,'') AS ID ,
+			ISNULL(BRXM,'') AS BRXM,
+			ISNULL(BRXB,'') AS BRXB,
+			ISNULL(LXDH,'') AS LXDH,
+			ISNULL(convert(varchar(10),YYSJ,23),'') AS YYSJ,
+			ISNULL(JTDZ,'') AS JTDZ,
+			ISNULL(REMARK,'') AS REMARK,
+			ISNULL(YBKH,'') AS YBKH,
+			ISNULL(convert(varchar(10),LRRQ,23),'') AS LRRQ,
+			ISNULL(KIND,'') AS KIND,
+			ISNULL(FLAG,'') AS FLAG
+		FROM 
+			MZ_SMFWYY 
+		WHERE 
+			FLAG='1' AND 
+			convert(varchar(10),YYSJ,23)=convert(varchar(10),getdate(),23)
+		ORDER BY YYSJ ASC
+	</select>
+	<select id="getvisityybyid" parameterClass="java.util.Map" resultMap="visityy">
+		SELECT 
+			ISNULL(ID,'') AS ID ,
+			ISNULL(BRXM,'') AS BRXM,
+			ISNULL(BRXB,'') AS BRXB,
+			ISNULL(LXDH,'') AS LXDH,
+			ISNULL(convert(varchar(10),YYSJ,23),'') AS YYSJ,
+			ISNULL(JTDZ,'') AS JTDZ,
+			ISNULL(REMARK,'') AS REMARK,
+			ISNULL(YBKH,'') AS YBKH,
+			ISNULL(convert(varchar(10),LRRQ,23),'') AS LRRQ,
+			ISNULL(KIND,'') AS KIND,
+			ISNULL(FLAG,'') AS FLAG
+		FROM 
+			MZ_SMFWYY 
+		WHERE 
+			ID=#id#
+		ORDER BY YYSJ ASC
+	</select>
+	<select id="getpatientbycardnum" parameterClass="java.util.Map" resultMap="patientbasic">
+		select 
+			ISNULL(brxm,'') as brxm,
+			brxb as brxb,
+			ISNULL(convert(varchar(10),csny,23),'') as csny,
+			ISNULL(hkdz,'') as hkdz,ISNULL(jtdh,'') as jtdh , 
+			ISNULL(mzhm,'') as ybkh 
+		from 
+			ms_brda 
+		where 
+			mzhm =#ybkh#
+	</select>
+	<insert id="insertinfo" parameterClass="java.util.Map">
+		insert 
+		into 
+		cf_cfjob
+		(
+			cfsb,
+			total,
+			currents,
+			markdate
+		) 
+		values
+		(
+			#cfsb#,
+			#total#,
+			#currents#,
+			CONVERT(varchar(20), GETDATE(), 20)
+		)
+	</insert>
+	<select id="getpatientwpygcjlcond" parameterClass="java.util.Map" resultMap="wpygcjlforesult">
+		select
+			ISNULL(id,'') as WPYGCJLID,
+			ISNULL(userid,'') as USERNAME,
+			ISNULL(blfy,'') as BLFY,
+			ISNULL(blfynr,'') as BLFYNR,
+			ISNULL(chuli,'') as CHULI
+		from 
+			mz_wpgcjl
+		where 
+			id=#wpygcjlid#
+	</select>
+	<select id="getpatientwpybasicinfobycond" parameterClass="java.util.Map" resultMap="wpybasicinforesult">
+		select
+			ISNULL(brxm,'') as BRXM,
+			brxb as BRXB,
+			ISNULL(jtdz,'') AS JTDZ,
+			ISNULL(lxdh,'') AS LXDH,
+			ISNULL(lczd,'') AS LCZD
+		from 
+			mz_wpbr
+		where 
+			id=#cfid#
+	</select>
+	<select id="clinicservicepatientwpylist" parameterClass="java.util.Map" resultMap="mzgcwpypatientlist">
+		select
+			ISNULL(a.id,'') as ID,
+			ISNULL(a.cfid,'') as CFID,
+			ISNULL(b.brxm,'') as BRXM,
+			b.brxb as BRXB,
+			ISNULL(b.jtdz,'') as JTDZ,
+			ISNULL(b.lxdh,'') as LXDH,
+			ISNULL(convert(varchar(10),a.lrrq,23),'') as MARKDATE,
+			ISNULL(b.lczd,'') as LCZD
+		from 
+			mz_wpgcjl a,
+			mz_wpbr b
+		where 
+			a.cfid=b.id
+		order by a.lrrq desc
+	</select>
+	<select id="getpatientgcjlcond" parameterClass="java.util.Map" resultMap="gcjlforesult">
+		select
+			ISNULL(id,'') as GCJLID,
+			ISNULL(userid,'') as USERNAME,
+			ISNULL(blfy,'') as BLFY,
+			ISNULL(blfynr,'') as BLFYNR,
+			ISNULL(chuli,'') as CHULI
+		from 
+			mz_gcjl
+		where 
+			id=#gcjlid#
+	</select>
+	<update id="updatemzwpgcjl" parameterClass="java.util.Map">
+		update 
+			mz_wpgcjl 
+		set 
+			USERID=#optid#,
+			BLFY=#blfy#,
+			BLFYNR=#blfynr#,
+			CHULI=#chuli#, 
+			LRRQ=CONVERT(varchar(20), GETDATE(), 20) 
+		where 
+			id=#id#
+	</update>
+	<insert id="insertwpinfo" parameterClass="java.util.Map">
+		insert 
+		into 
+		cf_wpcfjob
+		(
+			cfid,
+			total,
+			currents,
+			markdate
+		) 
+		values
+		(
+			#cfsb#,
+			#total#,
+			#currents#,
+			CONVERT(varchar(20), GETDATE(), 20)
+		)
+	</insert>
+	<insert id="visittotable" parameterClass="java.util.Map">
+		insert 
+		into 
+		visitservice
+		(
+			ybkh,
+			name,
+			sex,
+			address,
+			phone,
+			content,
+			userid,
+			kind,
+			markdate
+		) 
+		values
+		(
+			#ybkh#,
+			#patientname#,
+			#sex#,
+			#address#,
+			#phone#,
+			#content#,
+			#optid#,
+			#kind#,
+			CONVERT(varchar(20), GETDATE(), 20)
+		)
+	</insert>
+	<insert id="insertintowpbr" parameterClass="java.util.Map">
+		INSERT 
+		INTO 
+		MZ_WPBR
+		(
+			BRXM,
+			BRXB,
+			LXDH,
+			JTDZ,
+			LCZD,
+			LRRQ
+		) 
+		VALUES
+		(
+			#brxm#,
+			#brxb#,
+			#lxdh#,
+			#jtdz#,
+			#lczd#,
+			CONVERT(varchar(20), GETDATE(), 20)
+		)
+	</insert>
+	<insert id="insertintowpbrxx" parameterClass="java.util.Map">
+		INSERT 
+		INTO 
+		MZ_WPBRXX
+		(
+			WPBRID,
+			YPXH,
+			YPMC,
+			YPGG,
+			YPDW,
+			YPJL,
+			JLDW,
+			PC,
+			YPYF,
+			KFRQ,
+			ZTBS,
+			DAYS,
+			LRRQ
+		) 
+		VALUES
+		(
+			IDENT_CURRENT('MZ_WPBR'),
+			#ypxh#,
+			#ypmc#,
+			#ypgg#,
+			#ypdw#,
+			#ypjl#,
+			#jldw#,
+			#pc#,
+			#ypyf#,
+			#kfrq#,
+			#ztbs#,
+			#days#,
+			CONVERT(varchar(20), GETDATE(), 20)
+		)
+	</insert>
+	<insert id="yyvisittotable" parameterClass="java.util.Map">
+		insert 
+		into 
+		visitservice
+		(
+			ybkh,
+			name,
+			sex,
+			address,
+			phone,
+			content,
+			userid,
+			kind,
+			markdate
+		) 
+		values
+		(
+			#ybkh#,
+			#patientname#,
+			#sex#,
+			#address#,
+			#phone#,
+			#content#,
+			#optid#,
+			#kind#,
+			CONVERT(varchar(20), GETDATE(), 20)
+		)
+	</insert>
+	<insert id="yyservicetotable" parameterClass="java.util.Map">
+		insert 
+		into 
+		MZ_SMFWYY
+		(
+			brxm,
+			brxb,
+			lxdh,
+			yysj,
+			jtdz,
+			remark,
+			ybkh,
+			lrrq,
+			kind,
+			FLAG
+		) 
+		values
+		(
+			#brxm#,
+			#brxb#,
+			#lxdh#,
+			#yysj#,
+			#jtdz#,
+			#remark#,
+			#ybkh#,
+			CONVERT(varchar(20), GETDATE(), 20),
+			#kind#,
+			1
+		)
+	</insert>
+	<update id="updatevisitservice" parameterClass="java.util.Map">
+		update 
+			visitservice 
+		set 
+			ybkh=#ybkh#,
+			name=#patientname#,
+			sex=#sex#,
+			address=#address#,
+			phone=#phone#,
+			content=#content#,
+			userid=#optid#,
+			kind=#kind#,
+			markdate=CONVERT(varchar(20), GETDATE(), 20) 
+		where 
+			id=#id#
+	</update>
+	<update id="updateyyvisitservice" parameterClass="java.util.Map">
+		update 
+			MZ_SMFWYY 
+		set 
+			FLAG=0
+		where 
+			id=#id#
+	</update>
+	<insert id="insertnursejob" parameterClass="java.util.Map">
+		insert 
+		into 
+		gy_nursejob
+		(
+			userid,
+			cfsb,
+			number,
+			jlrq
+		) 
+		values
+		(
+			#userid#,
+			#cfsb#,
+			1,
+			CONVERT(varchar(20), GETDATE(), 20)
+		)
+	</insert>
+	<insert id="insertwpnursejob" parameterClass="java.util.Map">
+		insert 
+		into 
+		gy_wpnursejob
+		(
+			userid,
+			cfid,
+			number,
+			jlrq
+		) 
+		values
+		(
+			#userid#,
+			#cfsb#,
+			1,
+			CONVERT(varchar(20), GETDATE(), 20)
+		)
+	</insert>
+	<insert id="synmzgcjl" parameterClass="java.util.Map">
+		insert 
+		into 
+		mz_gcjl
+		(
+			CFSB,
+			LRRQ
+		) 
+		values
+		(
+			#cfsb#,
+			CONVERT(varchar(20), GETDATE(), 20)
+		)
+	</insert>
+	<insert id="synwpmzgcjl" parameterClass="java.util.Map">
+		insert 
+		into 
+		mz_wpgcjl
+		(
+			CFID,
+			LRRQ
+		) 
+		values
+		(
+			#cfsb#,
+			CONVERT(varchar(20), GETDATE(), 20)
+		)
+	</insert>
+	<insert id="insertmzgcjl" parameterClass="java.util.Map">
+		insert 
+		into 
+		mz_gcjl
+		(
+			CFSB,
+			USERID,
+			DISU,
+			GUANCHA,
+			CHULI,
+			LRRQ
+		) 
+		values
+		(
+			#cfsb#,
+			#optid#,
+			#disu#,
+			#guancha#,
+			#chuli#,
+			CONVERT(varchar(20), GETDATE(), 20)
+		)
+	</insert>
+	<update id="updatemzgcjl" parameterClass="java.util.Map">
+		update 
+			mz_gcjl 
+		set 
+			USERID=#optid#,
+			BLFY=#blfy#,
+			CHULI=#chuli#, 
+			LRRQ=CONVERT(varchar(20), GETDATE(), 20) 
+		where 
+			id=#id#
+	</update>
+	<update id="updateinfo" parameterClass="java.util.Map">
+		update 
+			cf_cfjob 
+		set 
+			currents=#currents#,
+			markdate=CONVERT(varchar(20), GETDATE(), 20) 
+		where 
+			cfsb=#cfsb#
+	</update>
+	<update id="updatewpinfo" parameterClass="java.util.Map">
+		update 
+			cf_wpcfjob 
+		set 
+			currents=#currents#,
+			markdate=CONVERT(varchar(20), GETDATE(), 20) 
+		where 
+			cfid=#cfsb#
+	</update>
+	
+	
+	<select id="getMaxId" parameterClass="java.util.Map" resultMap="appid">
+		select 
+			max(id) as appid 
+		from 
+			ms_survey 
+	</select>
+	<insert id="insertTPRBPInfo" parameterClass="java.util.Map">
+		insert 
+		into 
+		ms_survey
+		(
+			APPID,
+			XM,
+			XB,
+			NL,
+			HY,
+			GMS,
+			XX,
+			JTDZ,
+			LXDH,
+			MZZD,
+			TZ,
+			PZ,
+			RZ,
+			BPZ1,
+			BPZ2,
+			JLSJ,
+			CLR
+		)
+		values
+		(
+			#appid#,
+			#xm#,
+			#xb#,
+			#nl#,
+			#hy#,
+			#gms#,
+			#xx#,
+			#jtdz#,
+			#lxdh#,
+			#mzzd#,
+			#tz#,
+			#pz#,
+			#rz#,
+			#bpz1#,
+			#bpz2#,
+			convert(varchar(50), GETDATE(), 20),
+			#clr#
+		)
+	</insert>
+	<update id="updateTPRBPInfo" parameterClass="java.util.Map">
+		update 
+			ms_survey 
+		set 
+			XM=#xm# ,
+			XB=#xb#,
+			JTDZ=#jtdz#,
+			LXDH=#lxdh#,
+			MZZD=#mzzd#,
+			NL=#nl#,
+			HY=#hy#,
+			GMS=#gms#,
+			XX=#xx#,
+			TZ=#tz#,
+			PZ=#pz#,
+			RZ=#rz#,
+			BPZ1=#bpz1#,
+			BPZ2=#bpz2#,
+			JLSJ=convert(varchar(50), GETDATE(), 20),
+			CLR=#clr#
+		where 
+			APPID=#appid#
+	</update>
+	<insert id="insertTreatment" parameterClass="java.util.Map">
+		insert 
+		into
+		ms_treatment
+		(
+			ybkh,
+			name,
+			brnl,
+			brhy,
+			gms,
+			xx,
+			mzzd,
+			description,
+			sex,
+			address,
+			phone,
+			userid,
+			markdate,
+			jc,
+			czmc
+		)
+		values
+		(
+			#ybkh#,
+			#patientname#,
+			#brnl#,
+			#brhy#,
+			#gms#,
+			#xx#,
+			#mzzd#,
+			#description#,
+			#sex#,
+			#address#,
+			#phone#,
+			#optid#,
+			CONVERT(varchar(20),GETDATE(),20),
+			#jc#,
+			#czmc#
+		)
+	</insert>
+	<update id="updateTreatment" parameterClass="java.util.Map">
+		update
+			ms_treatment
+		set
+			ybkh=#ybkh#,
+			name=#patientname#,
+			brnl=#brnl#,
+			brhy=#brhy#,
+			gms=#gms#,
+			xx=#xx#,
+			mzzd=#mzzd#,
+			description=#description#,
+			sex=#sex#,
+			address=#address#,
+			phone=#phone#,
+			userid=#optid#,
+			markdate=CONVERT(varchar(20),GETDATE(),20),
+			jc=#jc#,
+			czmc=#czmc#
+		where 
+			id = #treatmentid#
+	</update>
+	<insert id="insertSanitation" parameterClass="java.util.Map">
+		insert 
+		into
+		ms_sanitation
+		(
+			userid,
+			markdate,
+			sanitationcontent,
+			sanitationcomplete
+		)
+		values
+		(
+			#optid#,
+			CONVERT(varchar(20),GETDATE(),20),
+			#sanitationcontent#,
+			#sanitationcomplete#
+		)
+	</insert>
+	<update id="updateSanitation" parameterClass="java.util.Map">
+		update
+			ms_sanitation
+		set
+			sanitationcontent=#sanitationcontent#,
+			sanitationcomplete=#sanitationcomplete#,
+			userid=#optid#,
+			markdate=CONVERT(varchar(20),GETDATE(),20)
+		where 
+			id = #sanitationid#
+	</update>
+	<insert id="insertStartNum" parameterClass="java.util.Map">
+		insert into gy_identity(TNAME,VALUE,ORIGIN_VALUE,INC_VALUE) values(#type#,1,1,1)
+	</insert>
+	<select id="getSqbh" parameterClass="java.util.Map" resultMap="sqbh">
+		SELECT csz as SQBH FROM GY_XTCS WHERE CSMC ='szjd' and xtsb = 10  
+	</select>
+	<select id="getKsdm" parameterClass="java.util.Map" resultMap="ksdm">
+		select ksdm from gy_ygdm where ygdm=#ygdm#
+	</select>
+	
+	
+	<insert id="insertGhmx" parameterClass="java.util.Map">
+		insert into MS_GHMX(SBXH,ID,BRXZ,GHSJ,GHLB,KSDM,YSDM,
+JZXH,GHCS,GHJE,ZLJE,ZJFY,BLJE,XJJE,ZPJE,ZHJE,HBWC,QTYS,
+JZJS,THBZ,CZPB,MZLB,YYBZ,YSPB,DZSB,TCZF,JFFS,FYZE,ZFZE,TCJJZF,
+WNZHZF,DNZHZF,GJJZF,GWYBZZF,XJZF,TZBBZ,YHZH,YQFYZE,YQZFZE,YQZHZF,
+YQDBTCZF,YQGRXJZF,YQDBBCZF,YQTDMZFY,YQTSYLFY,JZKF,YQDZ,HYLB,ZFDDNZH,
+ZFDLNZH,ZFDXJ,TCDTC,FJDDFFJ,JZBZ,TCDXJ)
+VALUES(#sbxh#,#appid#,#brxz#,convert(varchar(50), GETDATE(), 20),1,#ksdm#,#ysdm#,#jzxh#,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,1,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0)
+	</insert>
+	<insert id="insertBrda" parameterClass="java.util.Map">
+		INSERT INTO MS_BRDA(ID,MZHM,BRXM,BRXZ,BRXB,CSNY,HYZK,XXDM,HKDZ,JTDH,CZRQ)
+VALUES(#appid#,#mzhm#,#brxm#,#brxz#,#brxb#,#csny#,#hyzk#,#xxdm#,#hkdz#,#jtdh#,convert(varchar(50), GETDATE(), 20))
+	</insert>
+	<insert id="insertSurvey" parameterClass="java.util.Map">
+		INSERT INTO MS_SURVEY(ID,MZHM,GMBJ,GMWZ,XXDM,MZZD,TW,MB,HX,SSY,SZY,JLSJ,CLR,SBXH,JZXH)
+VALUES(#appid#,#mzhm#,#gmbj#,#gmwz#,#xxdm#,#mzzd#,#tw#,#mb#,#hx#,#ssy#,#szy#,convert(varchar(50), GETDATE(), 20),#clr#,#sbxh#,#jzxh#)
+	</insert>
+	
+	<update id="updateGhmx" parameterClass="java.util.Map">
+		update MS_GHMX set BRXZ=#brxz# ,KSDM=#ksdm#,YSDM=#ysdm#
+		where SBXH=#sbxh#
+	</update>
+	<update id="updateBrda" parameterClass="java.util.Map">
+		update MS_BRDA set BRXM=#brxm# ,BRXZ=#brxz#,BRXB=#brxb#,CSNY=#csny#,HYZK=#hyzk#,XXDM=#xxdm#,HKDZ=#hkdz#,JTDH=#jtdh#,
+		CZRQ=convert(varchar(50), GETDATE(), 20)
+		where ID=#appid#
+	</update>
+	<update id="updateSurvey" parameterClass="java.util.Map">
+		update ms_survey set GMBJ=#gmbj# ,GMWZ=#gmwz#,XXDM=#xxdm#,MZZD=#mzzd#,TW=#tw#,MB=#mb#,HX=#hx#,SSY=#ssy#,SZY=#szy#,
+		JLSJ=convert(varchar(50), GETDATE(), 20),CLR=#clr#,SFLSRY=#sflsry#,SFYQRY=#sfyqry#
+		where SBXH=#sbxh#
+	</update>
+	<update id="updateSurvey_yb2" parameterClass="java.util.Map">
+		update ms_survey set GMBJ=#gmbj# ,GMWZ=#gmwz#,XXDM=#xxdm#,MZZD=#mzzd#,TW=#tw#,MB=#mb#,HX=#hx#,SSY=#ssy#,SZY=#szy#,
+		JLSJ=convert(varchar(50), GETDATE(), 20),CLR=#clr#,JZXH=#JZXH#,SFLSRY=#sflsry#,SFYQRY=#sfyqry#
+		where SBXH=#sbxh#
+	</update>
+	
+		<update id="updateSurvey_yb" parameterClass="java.util.Map">
+		update ms_survey set GMBJ=#gmbj# ,GMWZ=#gmwz#,XXDM=#xxdm#,MZZD=#mzzd#,TW=#tw#,MB=#mb#,HX=#hx#,SSY=#ssy#,SZY=#szy#,
+		JLSJ=convert(varchar(50), GETDATE(), 20),CLR=#clr#,SFLSRY=#sflsry#,SFYQRY=#sfyqry#
+		where SBXH=#sbxh#
+	</update>
+	<select id="getBh" parameterClass="java.util.Map" resultMap="appid">
+		select value from gy_identity where tname = #type#
+	</select>
+	<select id="ms_ghmx" parameterClass="java.util.Map" resultMap="count1">
+		select count(*)as count1 from gy_identity where tname = #type#
+	</select>
+	<select id="ms_brda" parameterClass="java.util.Map" resultMap="count2">
+		select count(*)as count2 from gy_identity where tname = #type#
+	</select>
+	<select id="mzhm" parameterClass="java.util.Map" resultMap="count3">
+		select count(*)as count3 from gy_identity where tname = #type#
+	</select>
+	<select id="jzxh" parameterClass="java.util.Map" resultMap="count4">
+		select count(*)as count4 from gy_identity where tname = #type#
+	</select>
+	<select id="ms_survey" parameterClass="java.util.Map" resultMap="count5">
+		select count(*)as count5 from gy_identity where tname = #type#
+	</select>
+	<update id="ms_ghmx1" parameterClass="java.util.Map">
+		update gy_identity set value=#value# where tname = #type#
+	</update>
+	<update id="ms_brda1" parameterClass="java.util.Map">
+		update gy_identity set value=#value# where tname = #type#
+	</update>
+	<update id="mzhm1" parameterClass="java.util.Map">
+		update gy_identity set value=#value# where tname = #type#
+	</update>
+	<update id="jzxh1" parameterClass="java.util.Map">
+		update gy_identity set value=#value# where tname = #type#
+	</update>
+	<update id="ms_survey1" parameterClass="java.util.Map">
+		update gy_identity set value=#value# where tname = #type#
+	</update>
+	<select id="getAllTprbpInfo" parameterClass="java.util.Map"
+		resultMap="tprbpInfoResult">
+SELECT   MS_BRDA.ID AS APPID, 
+	MS_SURVEY.SBXH AS SBXH,
+	MS_BRDA.BRXM as BRXM, 
+ 	MS_BRDA.BRXB as BRXB,
+  	year(MS_BRDA.CSNY) AS CSNY, 
+  	ISNULL(MS_BRDA.JTDH,'') AS JTDH, 
+	 MS_SURVEY.TW AS TW,
+	 MS_SURVEY.MB AS MB,
+	 MS_SURVEY.HX AS HX,
+	 MS_SURVEY.SSY AS SSY,
+	 MS_SURVEY.SZY AS SZY,
+	 convert(varchar(20),MS_SURVEY.JLSJ,23) AS JLSJ,
+	 ISNULL(YGXM ,'') AS CLR		
+	FROM MS_BRDA,  MS_SURVEY,GY_YGDM
+	WHERE ( MS_SURVEY.ID = MS_BRDA.ID ) and  MS_SURVEY.CLR=GY_YGDM.YGDM
+			and	MS_SURVEY.JLSJ >=(CONVERT(varchar(20),GETDATE()-1, 20) )
+	</select>
+	<select id="getTprbpInfo" parameterClass="java.util.Map"
+		resultMap="tprbpInfoResult2">
+		SELECT  
+	 MS_BRDA.ID AS APPID, 
+	MS_SURVEY.SBXH AS SBXH,
+	MS_BRDA.MZHM	 as MZHM,
+	MS_BRDA.BRXM as BRXM, 
+ 	MS_BRDA.BRXB as BRXB,
+	ISNULL(MS_BRDA.HKDZ,'') AS JTDZ,
+	ISNULL(MS_BRDA.JTDH,'') AS JTDH, 
+  	year(MS_BRDA.CSNY) AS CSNY, 
+  	MS_SURVEY.GMBJ AS GMS,
+	ISNULL(MS_SURVEY.GMWZ,'') AS GMWZ,
+	MS_BRDA.HYZK AS HY,
+	MS_SURVEY.XXDM	AS XXDM,
+	ISNULL(MS_SURVEY.MZZD,'') AS MZZD,
+	MS_BRDA.BRXZ AS BRXZ,
+	 MS_SURVEY.TW AS TW,
+	 MS_SURVEY.MB AS MB,
+	 MS_SURVEY.HX AS HX,
+	 MS_SURVEY.SSY AS SSY,
+	 MS_SURVEY.SZY AS SZY,
+	 MS_SURVEY.SFLSRY AS SFLSRY,
+	 MS_SURVEY.SFYQRY AS SFYQRY,
+	 MS_SURVEY.CLR AS CLR
+	FROM MS_BRDA,  MS_SURVEY
+	WHERE  MS_SURVEY.ID = MS_BRDA.ID  and  MS_BRDA.ID=#appid# and MS_SURVEY.SBXH=#sbxh#
+	</select>
+	<select id="getAllYp" parameterClass="java.util.Map"
+		resultMap="allYpResult">
+select b.ypmc as ypmc from ms_cf02 a,yk_typk b
+where a.ypxh=b.ypxh and 
+a.gytj in ('4','5','401','403','404','405','406','407','601','602','603','604','612','902') and
+      a.cfsb=#cfsb#
+	</select>
+	<select id="getAllObserved" parameterClass="java.util.Map"
+		resultMap="allObservedResult">
+select  c.cfsb as cfsb,
+	convert(varchar(50),b.fyrq,20) as kssj,
+       a.brxm as brxm,
+       a.brxb as brxb,
+       year(a.csny) as csny,
+       a.hkdz as hkdz,
+       c.chuli as chuli,
+	c.blfy as blfy,
+	d.ygxm as ygxm,
+	convert(varchar(50),c.lrrq,20) as jssj
+from ms_brda a ,ms_cf01 b,mz_gcjl c,gy_ygdm d
+where a.id=b.id and 
+      b.cfsb=c.cfsb  and 
+      c.userid=d.ygdm and
+      c.lrrq >= CONVERT(varchar(20),GETDATE()-3, 20)
+	</select>
+</sqlMap>
