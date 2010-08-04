@@ -992,7 +992,7 @@ public class PatientDao extends SqlMapClientDaoSupport implements IDao
         return msid;
     }
 
-
+    @SuppressWarnings({ "rawtypes" })
     public List getAllTprbpInfo() throws SQLException
     {
         SqlMapSession session = null;
@@ -1009,7 +1009,7 @@ public class PatientDao extends SqlMapClientDaoSupport implements IDao
         return queryForList;
     }
 
-
+    @SuppressWarnings({  "rawtypes" })
     public List getTprbpInfo(Map map) throws SQLException
     {
         SqlMapSession session = null;
@@ -1122,7 +1122,7 @@ public class PatientDao extends SqlMapClientDaoSupport implements IDao
         session.close();
     }
 
-
+    @SuppressWarnings({ "rawtypes" })
     public long getSqbh() throws SQLException
     {
         int sqbh = 0;
@@ -1141,7 +1141,7 @@ public class PatientDao extends SqlMapClientDaoSupport implements IDao
         return sqbh;
     }
 
-
+    @SuppressWarnings({"rawtypes" })
     public int getCount(Map map) throws SQLException
     {
         String type = (String) map.get("type");
@@ -1161,7 +1161,7 @@ public class PatientDao extends SqlMapClientDaoSupport implements IDao
         return count;
     }
 
-
+    @SuppressWarnings({"rawtypes" })
     public void updateCount(Map map) throws SQLException
     {
         String typeid = (String) map.get("typeid");
@@ -1177,7 +1177,7 @@ public class PatientDao extends SqlMapClientDaoSupport implements IDao
         session.close();
     }
 
-
+    @SuppressWarnings({"rawtypes" })
     public void insertStartNum(Map hm) throws SQLException
     {
         SqlMapSession session = null;
@@ -1192,7 +1192,7 @@ public class PatientDao extends SqlMapClientDaoSupport implements IDao
         session.close();
     }
 
-
+    @SuppressWarnings({"rawtypes" })
     public void insertGhmxBrdaSurvey(Map map1,Map map2,Map map3) throws SQLException
     {
         SqlMapSession session = null;
@@ -1208,7 +1208,7 @@ public class PatientDao extends SqlMapClientDaoSupport implements IDao
         session.endTransaction();
         session.close();
     }
-
+    @SuppressWarnings({"rawtypes" })
     public void updateGhmxBrdaSurvey(Map map1,Map map2,Map map3) throws SQLException
     {
         SqlMapSession session = null;
@@ -1225,7 +1225,7 @@ public class PatientDao extends SqlMapClientDaoSupport implements IDao
         session.close();
     }
 
-
+    @SuppressWarnings({"rawtypes" })
     public void updateSurvey_yb(Map hm) throws SQLException
     {
         SqlMapSession session = null;
@@ -1240,7 +1240,7 @@ public class PatientDao extends SqlMapClientDaoSupport implements IDao
         session.close();
     }
 
-
+    @SuppressWarnings({"rawtypes" })
     public long getBh(Map map) throws SQLException
     {
         long bh = 0;
@@ -1259,7 +1259,7 @@ public class PatientDao extends SqlMapClientDaoSupport implements IDao
         return bh;
     }
 
-
+    @SuppressWarnings({"rawtypes" })
     public long getKsdm(Map map) throws SQLException
     {
         int ksdm = 0;
@@ -1278,7 +1278,7 @@ public class PatientDao extends SqlMapClientDaoSupport implements IDao
         return ksdm;
     }
 
-   
+    @SuppressWarnings({"rawtypes" })
     public void insertSurvey_yb(Map hm) throws SQLException
     {
         SqlMapSession session = null;
@@ -1292,6 +1292,7 @@ public class PatientDao extends SqlMapClientDaoSupport implements IDao
         session.endTransaction();
         session.close();
     }
+    @SuppressWarnings({"rawtypes" })
     public List getAllYp(Map map) throws SQLException
     {
         SqlMapSession session = null;
@@ -1308,6 +1309,7 @@ public class PatientDao extends SqlMapClientDaoSupport implements IDao
 
         return queryForList;
     }
+    @SuppressWarnings({"rawtypes" })
     public List selectAllObserved() throws SQLException
     {
         SqlMapSession session = null;
@@ -1324,6 +1326,7 @@ public class PatientDao extends SqlMapClientDaoSupport implements IDao
 
         return queryForList;
     }
+    @SuppressWarnings({"rawtypes" })
     public List selectAllObservedBetween(Map map) throws SQLException
     {
         SqlMapSession session = null;
