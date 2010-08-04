@@ -96,7 +96,7 @@ public class PatientInfoAction extends BaseAction
         JSONArray jarry = new JSONArray();
         PatientDao patientDao = (PatientDao) SystemInit.createFactory()
             .getBean("patientDao");
-        List li = patientDao.getAllTprbpInfo();
+        List<?> li = patientDao.getAllTprbpInfo();
         for (int i = 0; i < li.size(); i++)
         {
             JSONObject jo = JSONObject.fromObject(li.get(i));
@@ -121,7 +121,7 @@ public class PatientInfoAction extends BaseAction
         PatientDao patientDao = (PatientDao) SystemInit.createFactory().getBean("patientDao");
         
         try {
-            Map map=new HashMap();
+            Map<String, String> map=new HashMap<String, String>();
             map.put("ygdm", patient.getOptname());
             ksdm=patientDao.getKsdm(map); 
             sqbh=patientDao.getSqbh();
