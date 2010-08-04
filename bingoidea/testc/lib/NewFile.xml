@@ -1,0 +1,8 @@
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+	<SOAP-ENV:Header />
+	<SOAP-ENV:Body>
+		<ns1:echo xmlns:ns1="http://hw.jivaro.org">
+			<value type="String">1</value>
+		</ns1:echo>
+	</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
