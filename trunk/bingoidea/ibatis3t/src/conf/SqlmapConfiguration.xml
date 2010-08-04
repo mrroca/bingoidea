@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration 
+  PUBLIC "-//ibatis.apache.org//DTD Config 3.0//EN" "http://ibatis.apache.org/dtd/ibatis-3-config.dtd">
+
+<configuration>
+	<properties resource="conf/database.properties" />
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="${database.driver}"/>
+				<property name="url" value="${database.url}"/>
+				<property name="username" value="${database.user}"/>
+				<property name="password" value="${database.password}"/>
+			</dataSource>
+		</environment>
+		
+		<environment id="development_oracle">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="${oracle.database.driver}"/>
+				<property name="url" value="${oracle.database.url}"/>
+				<property name="username" value="${oracle.database.user}"/>
+				<property name="password" value="${oracle.database.password}"/>
+			</dataSource>
+		</environment>	
+	</environments>
+	
+	<mappers>
+		<mapper resource="conf/NewsNotice.xml"/>
+	</mappers>
+</configuration> 

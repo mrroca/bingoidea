@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  
+    PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN" "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="NewsNotice">
+	<resultMap type="org.newsnotice.domain.NewsNoticeModel" id="resultMap-getNewsNotice1">
+		<id column="NN_ID" property="id" />
+		<result column="CATEGORY" property="category" />
+		<result column="SUBJECT" property="subject" />
+		<result column="POSTED_DATE" property="postedDate" />
+		<result column="EXPIRY_DATE" property="expiryDate" />
+		<result column="ALERT" property="alert" />
+		<result column="EMAIL_ALERT" property="emailAlert" />
+		<result column="AUDIENCE" property="audience" />
+		<result column="FILTER" property="filter" />
+		<result column="FILTER_VALUE" property="filterValue" />
+		<result column="SUB_FILTER_VALUE" property="subFilterValue" />
+		<result column="EXCLUDE_USER_ID" property="excludeUserId" />
+		<result column="WF_DEPARTMENT" property="department" />
+		<result column="WF_STATUS" property="status" />
+		<result column="WF_NOTES" property="notes" />
+		<result column="DEFUNCT_IND" property="defunctInd" />
+		<result column="APPROVER" property="approver" />
+		<association property="newsNoticeContent" column="CONTENT_ID" javaType="org.newsnotice.domain.NewsNoticeContentModel">
+			<id column="CONTENT_ID" property="id" />
+			<result column="PARENT_NN_ID" property="parentId" />
+			<result column="CONTENT" property="content" />
+		</association>
+		<collection property="newsNoticeMsgBoxList" ofType="org.newsnotice.domain.NewsNoticeMsgBoxModel" >
+			<id column="MSG_BOX_ID" property="id"/>
+			<result column="USER_ID" property="userId" />
+			<result column="MSG_BOX_NN_ID" property="nnId" />
+			<result column="FOLDER" property="folder" />
+			<result column="READ" property="read" />			
+			<result column="READ_ON" property="readOn" />
+			<result column="MSG_BOX_DEFUNCT_IND" property="defunctInd" />
+			<result column="MSG_BOX_PI_NO" property="piNo" />
+		</collection>
+	</resultMap>
+	
+	<select id="getNewsNotice" parameterType="org.newsnotice.domain.NewsNoticeModel" resultMap="resultMap-getNewsNotice1" >
+		SELECT A.NN_ID, A.CATEGORY, A.SUBJECT, A.POSTED_DATE, A.EXPIRY_DATE, A.ALERT, A.EMAIL_ALERT, A.AUDIENCE,
+			A.FILTER, A.FILTER_VALUE, A.SUB_FILTER_VALUE, A.EXCLUDE_USER_ID, A.WF_DEPARTMENT, A.WF_STATUS, A.WF_NOTES,
+			A.DEFUNCT_IND, A.APPROVER, B.ID CONTENT_ID, B.PARENT_NN_ID, B.CONTENT, C.ID MSG_BOX_ID, C.USER_ID, 
+			C.NN_ID MSG_BOX_NN_ID, C.FOLDER, C.READ, C.READ_ON, C.DEFUNCT_IND MSG_BOX_DEFUNCT_IND, C.PI_NO MSG_BOX_PI_NO
+		FROM NN_MSTR A, NN_CONTENT B, NN_MSG_BOX C
+		WHERE A.NN_ID = B.PARENT_NN_ID
+		AND A.NN_ID = C.NN_ID
+		<if test="id != null">
+			AND A.NN_ID = #{id}
+		</if>
+		<if test="category != null">
+			AND A.CATEGORY = #{category}
+		</if>
+		<if test="status != null">
+			AND A.WF_STATUS = #{status}
+		</if>
+	</select>
+	
+	<resultMap type="org.newsnotice.domain.NewsNoticeModel" id="resultMap-getNewsNotice2">
+		<id column="NN_ID" property="id" />
+		<result column="CATEGORY" property="category" />
+		<result column="SUBJECT" property="subject" />
+		<result column="POSTED_DATE" property="postedDate" />
+		<result column="EXPIRY_DATE" property="expiryDate" />
+		<result column="ALERT" property="alert" />
+		<result column="EMAIL_ALERT" property="emailAlert" />
+		<result column="AUDIENCE" property="audience" />
+		<result column="FILTER" property="filter" />
+		<result column="FILTER_VALUE" property="filterValue" />
+		<result column="SUB_FILTER_VALUE" property="subFilterValue" />
+		<result column="EXCLUDE_USER_ID" property="excludeUserId" />
+		<result column="WF_DEPARTMENT" property="department" />
+		<result column="WF_STATUS" property="status" />
+		<result column="WF_NOTES" property="notes" />
+		<result column="DEFUNCT_IND" property="defunctInd" />
+		<result column="APPROVER" property="approver" />
+		<association property="newsNoticeContent" column="CONTENT_ID" 
+			javaType="org.newsnotice.domain.NewsNoticeContentModel" resultMap="resultMap-content" />
+			
+		<collection property="newsNoticeMsgBoxList" ofType="org.newsnotice.domain.NewsNoticeMsgBoxModel" 
+				resultMap="resultMap-msgbox" />
+			
+	</resultMap>
+	
+	<resultMap type="org.newsnotice.domain.NewsNoticeContentModel" id="resultMap-content">
+		<id column="CONTENT_ID" property="id" />
+		<result column="PARENT_NN_ID" property="parentId" />
+		<result column="CONTENT" property="content" />
+	</resultMap>
+	
+	<resultMap type="org.newsnotice.domain.NewsNoticeMsgBoxModel" id="resultMap-msgbox">
+		<id column="MSG_BOX_ID" property="id"/>
+		<result column="USER_ID" property="userId" />
+		<result column="MSG_BOX_NN_ID" property="nnId" />
+		<result column="FOLDER" property="folder" />
+		<result column="READ" property="read" />			
+		<result column="READ_ON" property="readOn" />
+		<result column="MSG_BOX_DEFUNCT_IND" property="defunctInd" />
+		<result column="MSG_BOX_PI_NO" property="piNo" />
+	</resultMap>
+	
+</mapper>  
