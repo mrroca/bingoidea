@@ -7,7 +7,6 @@ import java.util.Date;
 
 public class TestDLL
 {
-    
     public static void main(String[] args)
     {
         Calendar cal = Calendar.getInstance();//使用默认时区和语言环境获得一个日历.
@@ -16,7 +15,8 @@ public class TestDLL
         //cal.add(Calendar.DAY_OF_MONTH, +1);//取当前日期的后一天.    
           
         //通过格式化输出日期    
-        java.text.SimpleDateFormat format = new java.text.SimpleDateFormat("yyyy-MM-dd");    
+        @SuppressWarnings("unused")
+		java.text.SimpleDateFormat format = new java.text.SimpleDateFormat("yyyy-MM-dd");    
         
         //System.out.println("Today is:"+format.format(Calendar.getInstance().getTime()));    
          
