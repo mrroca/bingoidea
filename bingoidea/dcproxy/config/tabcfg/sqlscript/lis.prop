@@ -1,0 +1,6 @@
+#Sun Dec 13 23:39:33 CST 2009
+script=select * from v_assayrecord where rownum<\={size} and observationdatetime>to_date('{jyrq}','yyyy-mm-dd hh24\:mi\:ss') order by observationdatetime asc
+key={jyrq}
+arge={size}
+value=200000
+kval=2009-12-12 23\:48\:16

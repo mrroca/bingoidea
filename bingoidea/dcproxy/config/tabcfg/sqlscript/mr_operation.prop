@@ -1,0 +1,4 @@
+#Fri Aug 07 15:42:10 CST 2009
+script=select top {size} * from mr_operation
+arge={size}
+value=150000

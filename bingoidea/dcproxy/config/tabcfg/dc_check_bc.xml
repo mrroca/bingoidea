@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<config client="SZWSJ.DC" serviceId="UploadTable" size="3000" HZ=""
+	sleepTime='400'>
+	<!--
+		name 表名 text 中文注释 related 关联表 pk 主键列列名 fk 外键列列名 value 查询条件值 condition
+		查询条件 filter 过滤列列名
+	-->
+	<table name="DC_CHECK_BC" text="RIS B超表" related="" pk="CHECKRECORDID" fk=""
+		value="" condition="" filter="" query='' errorname="DC_CHECK_BC_ERR"
+		timeout="DC_CHECK_BC_TO">
+		<col name="CLINICID" text="" type="String" />
+		<col name="INHOSPTID" text="" type="String" />
+		<col name="HOSPITALCODE" text="" type="String" />
+		<col name="HOSPITALNAME" text="" type="String" />
+		<col name="CHECKRECORDID" text="" type="String" />
+		<col name="CHECKRECORDAPPDATETIME" text="" type="Timestamp" />
+		<col name="CHECKRECORDDATETIME" text="" type="Timestamp" />
+		<col name="CLINICIANCODE" text="" type="String" />
+		<col name="CLINICIANNAME" text="" type="String" />
+		<col name="CLINICIANAPPCODE" text="" type="String" />
+		<col name="CLINICIANAPPNAME" text="" type="String" />
+		<col name="CHECKRECORDAPPARATUS" text="" type="String" />
+		<col name="CHECKRECORDTYPE" text="" type="String" />
+		<col name="CHECKRECORDSUBCODE" text="" type="String" />
+		<col name="CHECKRECORDSUBNAME" text="" type="String" />
+		<col name="CHECKRECORDCONTENT" text="" type="String" />
+		<col name="CHECKRECORDRESULT" text="" type="String" />
+		<col name="CHECKRECORDDEPTCODE" text="" type="String" />
+		<col name="CHECKRECORDDEPTNAME" text="" type="String" />
+		<col name="CHECKRECORDAPPDEPTCODE" text="" type="String" />
+		<col name="CHECKRECORDAPPDEPTNAME" text="" type="String" />
+	</table>
+</config>

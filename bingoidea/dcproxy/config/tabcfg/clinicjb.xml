@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<config client="SZWSJ.DC" serviceId="UploadTable" size="3000" HZ=""
+	sleepTime='400'>
+	<!--
+		name 表名 text 中文注释 related 关联表 pk 主键列列名 fk 外键列列名 value 查询条件值 condition
+		查询条件 filter 过滤列列名
+	-->
+	<table name="CLINICJB" text="HIS门诊疾病表" related="" pk="CLINICID" fk=""
+		value="" condition="" filter="" query='' errorname="CLINICCF_TB_ERR"
+		timeout="CLINICCF_TB_TO">
+		<col name="PIDTYPE" text="" type="String" />
+		<col name="PID" text="" type="String" />
+		<col name="CLINICID" text="" type="String" />
+		<col name="HOSPITALCODE" text="" type="String" />
+		<col name="HOSPITALNAME" text="" type="String" />
+		<col name="CLINICDATETIME" text="" type="Timestamp" />
+		<col name="pv3" text="" type="String" />
+		<col name="pv2" text="" type="String" />
+		<col name="pv1" text="" type="String" />
+		<col name="CLINICID2" text="" type="String" />
+		<col name="DIAGNOSISCODE" text="" type="String" />
+		<col name="DIAGNOSISDESCRIPTION" text="" type="String" />
+		<col name="DIAGNOSISDATETIME" text="" type="Timestamp" />
+		<col name="DIAGNOSISTYPE" text="" type="String" />
+		<col name="DIAGNOSISDEPTCODE" text="" type="String" />
+		<col name="DIAGNOSISDEPTNAME" text="" type="String" />
+		<col name="DIAGNOSISPRIORITY" text="" type="String" />
+		<col name="DIAGNOSINGCLINICIANCODE" text="" type="String" />
+		<col name="DIAGNOSISSCOPE" text="" type="Timestamp" />
+		<col name="DIAGNOSINGCLINICIANNAME" text="" type="String" />
+		<col name="HEALTHCARERECIPE" text="" type="String" />
+	</table>
+</config>
