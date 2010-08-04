@@ -1,0 +1,77 @@
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<SOAP-ENV:Header>
+		<AuthenticationHeader xmlns="http://myservice/">
+			<UserName>WSJD</UserName>
+			<Password>WSJD2010</Password>
+		</AuthenticationHeader>
+	</SOAP-ENV:Header>
+	<SOAP-ENV:Body>
+		<SmsParam xmlns="http://myservice/">
+			<mobile>15150152960</mobile>
+			<content>test</content>
+		</SmsParam>
+	</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<soap:Body>
+		<soap:Fault>
+			<faultcode>soap:Server</faultcode>
+			<faultstring>Server was unable to process request. ---&gt; Index was
+				outside the bounds of the array.</faultstring>
+			<detail />
+		</soap:Fault>
+	</soap:Body>
+</soap:Envelope>
+
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+	<soap:Header>
+		<AuthenticationHeader xmlns="http://myservice/">
+			<UserName>WSJD</UserName>
+			<Password>WSJD2010</Password>
+		</AuthenticationHeader>
+	</soap:Header>
+	<soap:Body>
+		<SendSms xmlns="http://myservice/">
+			<mobile>15150152960</mobile>
+			<content>SFASFA</content>
+		</SendSms>
+	</soap:Body>
+</soap:Envelope>
+
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+	<soap:Header>
+		<AuthenticationHeader xmlns="http://myservice/">
+			<UserName>string</UserName>
+			<Password>string</Password>
+		</AuthenticationHeader>
+	</soap:Header>
+	<soap:Body>
+		<SendSms xmlns="http://myservice/">
+			<mobile>string</mobile>
+			<content>string</content>
+		</SendSms>
+	</soap:Body>
+</soap:Envelope>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<soap:Body>
+		<soap:Fault>
+			<faultcode>soap:Server</faultcode>
+			<faultstring>Server was unable to process request. ---&gt; Index was
+				outside the bounds of the array.</faultstring>
+			<detail />
+		</soap:Fault>
+	</soap:Body>
+</soap:Envelope>
+
+
