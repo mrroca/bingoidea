@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  
+    PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN" "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="Users">
+	
+	<select id="getCountOfUsers" parameterType="org.users.vo.UserModel" resultType="java.lang.Integer">
+		select count(*) from users where user_name = #{userName, jdbcType=VARCHAR}
+	</select>
+	
+	<select id="getUserByPK" parameterType="org.users.vo.UserModel" resultType="org.users.vo.UserModel">
+		select * from users where user_id = #{userId, jdbcType=NUMERIC}
+	</select>	
+</mapper>  
