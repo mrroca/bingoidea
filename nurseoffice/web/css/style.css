@@ -1,0 +1,473 @@
+body {
+	text-align: center;
+	font-size: 12px;
+}
+
+a {
+	text-decoration: none;
+	color: blue;
+	fason: expression(window.status = '');
+}
+a:link {
+	text-decoration: none;
+	color: blue;
+	fason: expression(window.status = '');
+}  
+a:visited {
+	text-decoration: none;
+	color: blue;
+	fason: expression(window.status = '');
+}  
+a:hover {
+	text-decoration: none;
+	color: blue;
+	fason: expression(window.status = '');
+} 
+a:active {
+	text-decoration: none;
+	color: red;
+	fason: expression(window.status = '');
+} 
+#outerdiv{
+	float:left;
+}
+#sexlabel{
+	float:left;
+	padding-top:4px;
+}
+#selectbox{
+	float:left;
+	padding:2px;
+}
+#lgbr {
+	float:right;
+	text-align: right;
+	font-size: 12px;
+	height: 40px;
+	padding: 0px;
+	padding-top:10px;
+	padding-right:10px;
+}
+#patienttable2 {
+	border: 1px solid #d6d6d6;
+	border-width: 1px 0 0 1px;
+	width: 100%;
+	border-spacing: 0;
+	font-size: 12px;
+	border-collapse: collapse;
+	text-align: center;
+}
+#topleft {
+	float:left;
+	text-align: center;
+	font-size: 12px;
+	width: 90%;
+	height: 95px;
+	padding: 0px;
+	margin-bottom: 0px;
+	background-image:url("../image/header.jpg");
+	background-repeat:no-repeat;
+	/*border:thin dotted red;*/
+}
+#topright {
+	float:right;
+	text-align: center;
+	font-size: 12px;
+	width: 10%;
+	height: 95px;
+	padding: 0px;
+	margin-bottom: 0px;
+	background-image:url("../image/header_right.jpg");
+	background-repeat:repeat-x;
+
+	/*border:thin dotted red;*/
+}
+#topmain {
+	text-align: center;
+	font-size: 12px;
+	width: 100%;
+	height: 95px;
+	padding: 0px;
+	margin-bottom: 0px;
+	background-image:url("../image/header_right.jpg");
+	background-repeat:repeat-x;
+	/*border:thin dotted red;*/
+}
+#topmain {
+	padding: 0px;
+	margin: 0px;
+}
+#topbody {
+	padding: 0px;
+	margin: 0px;
+}
+
+img{border:0}
+#leftlist {
+	width: 90%;
+	height: 430px;
+	text-align: center;
+	padding-left:5px;
+	margin-top:0px;
+	/*border-right:1px solid #CCCCCC;*/
+}
+#leftlist p {
+	width:90%;
+	text-align: center;
+	border:1px solid #ffffff;
+}
+#leftlist p{
+	background-color: #ffffff;
+}
+
+#title {
+	font-size: 50px;
+	letter-spacing: 6px;
+	/*border:thin dotted blue;*/
+}
+
+#ybdk {
+	float: left;
+	width: 50%;
+	height: 20px;
+	padding-left: 55%;
+	margin-bottom: 0px;
+	/*border:thin dotted blue;*/
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+}
+
+#zfdy {
+	float: right;
+	width: 50%;
+	height: 20px;
+	padding-right: 55%;
+	margin-bottom: 0px;
+	/*border:thin dotted blue;*/
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+}
+
+#result {
+	text-align: center;
+	font-size: 12px;
+}
+#help {
+	float:right;
+	text-align: right;
+	font-size: 12px;
+	height: 95px;
+	padding: 0px;
+	padding-top:5px;
+	padding-right:10px;
+}
+#logindiv {
+	text-align: center;
+	height:298px;
+	width:498px;
+	/*width:498px;
+	height:275px;*/
+	border:1px solid #CCCCCC;
+	background-color: #ffffff;
+}
+#loginfloat {
+	margin-top: 10%;
+	margin-left:auto;
+	margin-right:auto; 
+	/*margin-left: 30%;
+	margin-right: 30%;*/
+	padding:6px;
+	height:300px;
+	width:500px;
+	text-align: center;
+	border: none;
+	background-color: #F6F6F6;
+}
+
+#print {
+	border-spacing: 0;
+	font-size: 12px;
+	width: 400px;
+	text-align: center;
+}
+ 
+
+#printarea {
+	border: 1px dotted black;
+	border-width: 1px 0 0 1px;
+	width: 400px;
+	border-spacing: 0;
+	font-size: 12px;
+	border-collapse: collapse;
+	text-align: center;
+}
+
+#printarea td {
+	height:19px;
+	border:1px dotted black;
+	border-width: 0 1px 1px 0;
+	padding: 2px;
+}
+
+#patienttable {
+	border: 1px solid #d6d6d6;
+	border-width: 1px 0 0 1px;
+	width: 100%;
+	border-spacing: 0;
+	font-size: 12px;
+	border-collapse: collapse;
+	text-align: center;
+}
+
+#patienttable td {
+	height:25px;
+	border: solid #d6d6d6;
+	border-width: 0 1px 1px 0;
+	padding: 2px;
+}
+
+#cfinfomxbable {
+	border: 1px solid #d6d6d6;
+	border-width: 1px 0 0 1px;
+	width: 100%;
+	border-spacing: 0;
+	font-size: 12px;
+	border-collapse: collapse;
+	text-align: center;
+}
+
+#cfinfomxbable td {
+	height:25px;
+	border: solid #d6d6d6;
+	border-width: 0 1px 1px 0;
+	padding: 2px;
+}
+
+#basic {
+	border: 1px solid #d6d6d6;
+	border-width: 1px 0 0 1px;
+	width: 100%;
+	border-spacing: 0;
+	font-size: 12px;
+	border-collapse: collapse;
+	text-align: center;
+}
+
+#basic td {
+	height:25px;
+	border: solid #d6d6d6;
+	border-width: 0 1px 1px 0;
+	padding: 2px;
+}
+
+#listservicetable {
+	border: 1px solid #d6d6d6;
+	border-width: 1px 0 0 1px;
+	width: 100%;
+	border-spacing: 0;
+	font-size: 12px;
+	border-collapse: collapse;
+	text-align: center;
+}
+#listservicetable td {
+	height:25px;
+	border: solid #d6d6d6;
+	border-width: 0 1px 1px 0;
+	padding: 2px;
+}
+
+#printsyd {
+	border: 1px solid #d6d6d6;
+	border-width: 1px 0 0 1px;
+	width: 80%;
+	border-spacing: 0;
+	font-size: 12px;
+	border-collapse: collapse;
+	text-align: center;
+}
+
+#printsyd td {
+	height:25px;
+	border: solid #d6d6d6;
+	border-width: 0 1px 1px 0;
+	padding: 2px;
+}
+
+#clicktable {
+	font-size: 12px;
+}
+
+#visitservicetable {
+	border: 1px solid #d6d6d6;
+	border-width: 1px 0 0 1px;
+	width: 100%;
+	border-spacing: 0;
+	font-size: 12px;
+	border-collapse: collapse;
+	text-align: left;
+}
+
+#visitservicetable td {
+	height:25px;
+	border: solid #d6d6d6;
+	border-width: 0 1px 1px 0;
+	padding: 2px;
+}
+#visitservicetable2 {
+	border: 1px solid #d6d6d6;
+	border-width: 1px 0 0 1px;
+	width: 100%;
+	border-spacing: 0;
+	font-size: 12px;
+	border-collapse: collapse;
+	text-align: left;
+}
+
+#visitservicetable2 td {
+	height:25px;
+	border: solid #d6d6d6;
+	border-width: 0 1px 1px 0;
+	padding: 2px;
+}
+#clinictable{
+	border: 1px solid #d6d6d6;
+	border-width: 1px 0 0 1px;
+	width: 100%;
+	border-spacing: 0;
+	font-size: 12px;
+	border-collapse: collapse;
+	text-align: center;
+}
+#clinictable td {
+	height:25px;
+	border: solid #d6d6d6;
+	border-width: 0 1px 1px 0;
+	padding: 2px;
+}
+#clinicwpytable {
+	border: 1px solid #d6d6d6;
+	border-width: 1px 0 0 1px;
+	width: 100%;
+	border-spacing: 0;
+	font-size: 12px;
+	border-collapse: collapse;
+	text-align: center;
+}
+#clinicwpytable td {
+	height:25px;
+	border: solid #d6d6d6;
+	border-width: 0 1px 1px 0;
+	padding: 2px;
+}
+#clinicwpylurubasic{
+	border: 1px solid #d6d6d6;
+	border-width: 1px 0 0 1px;
+	width: 100%;
+	border-spacing: 0;
+	font-size: 12px;
+	border-collapse: collapse;
+	text-align: center;
+	float:left;
+}
+#clinicwpylurubasic td {
+	height:25px;
+	border: solid #d6d6d6;
+	border-width: 0 1px 1px 0;
+	padding: 2px;
+}
+#clinicwpyluru{
+	border: 1px solid #d6d6d6;
+	border-width: 1px 0 0 1px;
+	width: 100%;
+	border-spacing: 0;
+	font-size: 12px;
+	border-collapse: collapse;
+	text-align: center;
+	float:left;
+}
+#clinicwpyluru td {
+	
+	border: solid #d6d6d6;
+	border-width: 0 1px 1px 0;
+	padding: 2px;
+}
+#cliniclurubasic{
+	border: 1px solid #d6d6d6;
+	border-width: 1px 0 0 1px;
+	width: 100%;
+	border-spacing: 0;
+	font-size: 12px;
+	border-collapse: collapse;
+	text-align: center;
+	float:left;
+}
+#cliniclurubasic td {
+	height:25px;
+	border: solid #d6d6d6;
+	border-width: 0 1px 1px 0;
+	padding: 2px;
+}
+#clinicluru{
+	border: 1px solid #d6d6d6;
+	border-width: 1px 0 0 1px;
+	width: 100%;
+	border-spacing: 0;
+	font-size: 12px;
+	border-collapse: collapse;
+	text-align: center;
+	float:left;
+}
+#clinicluru td {
+	
+	border: solid #d6d6d6;
+	border-width: 0 1px 1px 0;
+	padding: 2px;
+}
+#clinicresult {
+	width: 20%;
+	float:left;
+	text-align: center;
+	font-size: 12px;
+	/*border:thin dotted blue;*/
+}
+#clinic {
+	width: 100%;
+	text-align: center;
+	font-size: 12px;
+	/*border:thin dotted red;*/
+}
+#clinicresultluru {
+	padding-left:1%;
+	float:right;
+	/*border:thin dotted green;*/
+	width: 80%;
+	text-align: center;
+	font-size: 12px;
+}
+#manageuser{
+	border: 1px solid #d6d6d6;
+	border-width: 1px 0 0 1px;
+	width: 100%;
+	border-spacing: 0;
+	font-size: 12px;
+	border-collapse: collapse;
+	text-align: center;
+	/*border:thin dotted red;*/
+}
+#manageuser td {
+	height:25px;
+	border: solid #d6d6d6;
+	border-width: 0 1px 1px 0;
+	padding: 2px;
+}
+#managetable{
+	border: 1px solid #d6d6d6;
+	border-width: 1px 0 0 1px;
+	width: 100%;
+	border-spacing: 0;
+	font-size: 12px;
+	border-collapse: collapse;
+	text-align: center;
+}

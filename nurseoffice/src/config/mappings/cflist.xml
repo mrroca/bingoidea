@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="CFVO">
+	<typeAlias alias="CFVO" type="com.nurse.model.CFVO" />
+	<resultMap id="result" class="CFVO">
+		<result property="username" column="USERID" />
+		<result property="name" column="NURSENAME" />
+	</resultMap>
+	<select id="getpersonbycond" resultMap="result">
+		select userid,nursename from gy_nursegroup a,gy_ygdm b where a.userid=#username# and a.userid = b.ygdm and b.ygmm=#password#
+	</select>
+</sqlMap>

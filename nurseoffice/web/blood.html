@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>New Document</TITLE>
+<META NAME="Description" CONTENT="">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</HEAD>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="Stylesheet" href="css/jquery.autocomplete.css" />
+<script type="text/javascript" src="script/jquery-1.3.2.js"></script>
+<script type="text/javascript" src="script/jquery.autocomplete.js"></script>
+<script type="text/javascript" src="script/url.js"></script>
+<script type="text/javascript" src="script/jquery.url.js"></script>
+<script type="text/javascript" src="script/jquery.jPrintArea.js"></script>
+<script type="text/javascript" src="script/strim.js"></script>
+<script type="text/javascript" src="script/blood.js"></script>
+
+<BODY>
+<table border="0" cellpadding="0" cellspacing="0" width="786" height="424">
+	<!-- MSTableType="layout" -->
+	<tr>
+		<td valign="top" colspan="3" height="61">
+		<!-- MSCellType="ContentHead" -->
+		<img border="0" src="image/ja_b_01.gif" width="255" height="61"><img border="0" src="image/ja_b_02.gif" width="260" height="61"><img border="0" src="image/ja_b_04.gif" width="269" height="61"></td>
+	</tr>
+	<tr>
+		<td valign="top" width="20">
+		<!-- MSCellType="NavBody" -->
+		<img border="0" src="image/ja_b_07.gif" width="19" height="100%"></td>
+		<td width="740" height="336" valign="top"><div id="result"></div></td>
+		<td valign="top" height="336" width="27">
+		<!-- MSCellType="NavBody2" -->
+		<img border="0" src="image/ja_b_10.gif" width="25" height="100%"></td>
+	</tr>
+	<tr>
+		<td valign="top" colspan="3" height="26">
+		<!-- MSCellType="ContentFoot" -->
+		<img border="0" src="image/ja_b_11.gif" width="19" height="19"><img border="0" src="image/ja_b_12.gif" width="740" height="19"><img border="0" src="image/ja_b_14.gif" width="25" height="19"></td>
+	</tr>
+</table>
+<div>
+<table id="treatmentTable">
+	<tr>
+		<td><input type="button" value="新增" style="width:102px;height:32px" name="bloodAppend"
+			id="bloodAppend" onclick="location.href='bloodAppend.jsp'"><input type="button" value="修改" style="width:102px;height:32px" name="bloodList"
+			id="bloodList"><input type="button" value="首页" style="width:102px;height:32px" name="treatmentfirstpage"
+			id="treatmentfirstpage"> <input type="button" value="上一页" style="width:102px;height:32px"
+			name="treatmentprevpage" id="treatmentprevpage"> <input value="1" type="hidden"
+			name="treatmentcurrentpage" id="treatmentcurrentpage" size="2"> <input
+			type="button" value="下一页" style="width:102px;height:32px" name="treatmentnextpage" id="treatmentnextpage"> <input
+			type="button" value="最后一页" style="width:102px;height:32px" name="treatmentlastpage" id="treatmentlastpage"></td>
+		<td>每页11条</td>
+		<td><span id="treatmentpageNo">0</span>/ <span id="treatmenttotalPages">0</span>页</td>
+		<td></td>
+		<td><span id="treatmenttotalRecordsUI">0</span> 条</td>
+	</tr>
+</table>
+</div>
+</BODY>
+</HTML>

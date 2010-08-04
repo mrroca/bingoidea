@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<include file="struts-default.xml" />
+	<package name="com.nurse.service" extends="struts-default">
+
+		<global-results>
+			<result name="Exception">error.jsp</result>
+		</global-results>
+
+		<global-exception-mappings>
+			<exception-mapping exception="java.lang.Exception"
+				result="Exception" />
+		</global-exception-mappings>
+
+
+		<action name="HelloWorld" class="com.nurse.service.HelloWorld">
+			<result>HelloWorld.jsp</result>
+		</action>
+
+		<action name="showUserList" class="com.nurse.action.UserAction">
+			<result>userList.jsp</result>
+		</action>
+
+		<action name="submitUser" class="com.nurse.action.UserAction"
+			method="submitUser">
+			<result name="input">user.jsp</result>
+			<result name="userList" type="chain">showUserList</result>
+		</action>
+
+		<action name="createOrEditUser" class="com.nurse.action.UserAction"
+			method="createOrEditUser">
+			<result>user.jsp</result>
+		</action>
+
+		<action name="deleteUser" class="com.nurse.action.UserAction"
+			method="deleteUser">
+			<result name="userList" type="chain">showUserList</result>
+		</action>
+
+
+
+	</package>
+	<package namespace="/" name="com.nurse" extends="struts-default">
+		<action name="getAllUser" class="com.nurse.action.UsersAction"
+			method="getAllUser">
+			<result name="allUser">content1.jsp</result>
+		</action>
+		<action name="login" class="com.nurse.action.LoginAction"
+			method="personLogin">
+			<result name="success">/main.html</result>
+			<result name="failure">/error.jsp</result>
+			<result name="logon">/login.html</result>
+			<result name="input">/login.html</result>
+		</action>
+	</package>
+
+	<package name="default" extends="json-default">
+		<action name="requestPatientInfo" class="com.nurse.action.PatientInfoAction"
+			method="getPatientInfo_CF">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="requestPatientInfomx" class="com.nurse.action.PatientInfoAction"
+			method="getPatientInfoCFMX">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="requestClinicPatientInfo" class="com.nurse.action.PatientInfoAction"
+			method="getClinicPatientInfo">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="requestClinicPatientWpyList" class="com.nurse.action.PatientInfoAction"
+			method="getClinicPatientWpy">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="requestPatientWpyInfomx" class="com.nurse.action.PatientInfoAction"
+			method="getPatientWpyInfoCFMX">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="saveClinicWpyService" class="com.nurse.action.PatientInfoAction"
+			method="saveClinicWpyService">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="savePatientInfo" class="com.nurse.action.PatientInfoAction"
+			method="savePatientinfo">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="saveWPPatientInfo" class="com.nurse.action.PatientInfoAction"
+			method="saveWPPatientinfo">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="getPrintInfo" class="com.nurse.action.PatientInfoAction"
+			method="getPrintInfo">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="getWPPrintinfo" class="com.nurse.action.PatientInfoAction"
+			method="getWPPrintInfo">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="getAllPatient" class="com.nurse.action.PatientInfoAction"
+			method="getPatientAll">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="getWCLAllPatient" class="com.nurse.action.PatientInfoAction"
+			method="getWclPatientAll">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="getYCLAllPatient" class="com.nurse.action.PatientInfoAction"
+			method="getYclPatientAll">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="getZFAllPatient" class="com.nurse.action.PatientInfoAction"
+			method="getZFPatientAll">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="requestPatientcurrents" class="com.nurse.action.PatientInfoAction"
+			method="getPatientCurrents">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="requestWPPatientcurrents" class="com.nurse.action.PatientInfoAction"
+			method="getWPPatientCurrents">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="requestPatientName" class="com.nurse.action.PatientInfoAction"
+			method="getPatientName">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="requestDrugInfoByPYDM" class="com.nurse.action.PatientInfoAction"
+			method="getDrugInfoByPYDM">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="requestPatientList" class="com.nurse.action.PatientInfoAction"
+			method="getPatientListByName">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="requestPatientBasic" class="com.nurse.action.PatientInfoAction"
+			method="getPatientListByCard">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="requestPersonInfo" class="com.nurse.action.PatientInfoAction"
+			method="getPersonInfo">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="requestSaveVisitService" class="com.nurse.action.PatientInfoAction"
+			method="saveVisitService">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="requestSaveYYVisitService" class="com.nurse.action.PatientInfoAction"
+			method="saveVisitYYService">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="requestClinicPatientList" class="com.nurse.action.PatientInfoAction"
+			method="getClinicPatient">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="saveClinicService" class="com.nurse.action.PatientInfoAction"
+			method="saveClinicService">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="requestAllPerson" class="com.nurse.action.PersonOperateAction"
+			method="getAllPerson">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="updateNurseInfo" class="com.nurse.action.PersonOperateAction"
+			method="modifyPersons">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="requestVisitService" class="com.nurse.action.PatientInfoAction"
+			method="getAllVisitService">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="requestVisitServiceByCond" class="com.nurse.action.PatientInfoAction"
+			method="getVisitServiceByCond">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		
+		<action name="saveTPRBP" class="com.nurse.action.PatientInfoAction"
+			method="saveTPRBPinfo">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="getAllTprbp" class="com.nurse.action.PatientInfoAction"
+			method="getAllTprbp">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="getTprbpInfo" class="com.nurse.action.PatientInfoAction"
+			method="getTprbpInfo">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="getAllTreatment" class="com.nurse.action.PatientInfoAction"
+			method="getTreatmentAll">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="getAllSanitation" class="com.nurse.action.PatientInfoAction"
+			method="getSanitationAll">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="requestSaveTreatmentService" class="com.nurse.action.PatientInfoAction"
+			method="saveTreatment">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="requestUpdateTreatmentService" class="com.nurse.action.PatientInfoAction"
+			method="updateTreatment">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="requestSaveSanitationService" class="com.nurse.action.PatientInfoAction"
+			method="saveSanitation">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="requestUpdateSanitationService" class="com.nurse.action.PatientInfoAction"
+			method="updateSanitation">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="requestPatientBasicByCard" class="com.nurse.action.PatientInfoAction"
+			method="getPatientBasicByCond">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="requestWpPatientAll" class="com.nurse.action.PatientInfoAction"
+			method="getWpPatientAllList">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="requestWpPatientCFMXList" class="com.nurse.action.PatientInfoAction"
+			method="getWpPatientInfoByID">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="requestsaveVisitYYService" class="com.nurse.action.PatientInfoAction"
+			method="saveYYVisitService">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="requestsaveWpPatientInfo" class="com.nurse.action.PatientInfoAction"
+			method="saveWpPatientInfo">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="requestVisitServiceYYByCond" class="com.nurse.action.PatientInfoAction"
+			method="getVisitServiceYYByCond">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+
+		<action name="requestVisitServiceYYByID" class="com.nurse.action.PatientInfoAction"
+			method="getVisitServiceYYByID">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="requestTodayYYVisitService" class="com.nurse.action.PatientInfoAction"
+			method="getTodayYYVisitService">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="getAllObserved" class="com.nurse.action.PatientInfoAction"
+			method="getAllObserved">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="getAllObservedBetween" class="com.nurse.action.PatientInfoAction"
+			method="getAllObservedBetween">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+	</package>
+
+</struts>    

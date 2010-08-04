@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="Person">
+	<typeAlias alias="Person" type="com.nurse.model.Person" />
+	<resultMap id="result" class="Person">
+		<result property="username" column="USERID" />
+		<result property="name" column="NURSENAME" />
+	</resultMap>
+	<resultMap id="personresult" class="java.util.HashMap">
+		<result property="ygdm" column="YGDM" />
+		<result property="ygxm" column="YGXM" />
+	</resultMap>
+	<resultMap id="person" class="java.util.HashMap">
+		<result property="userid" column="USERID" />
+	</resultMap>
+	<select id="getpersonbycond" resultMap="result">
+		select a.userid as userid,b.ygxm as nursename from gy_nursegroup a,gy_ygdm b where a.userid=#username# and a.userid = b.ygdm and b.ygmm=#password# and a.validflag='1'
+	</select>
+	<select id="getpersons" resultMap="personresult">
+		select ygdm,ygxm from gy_ygdm where  not exists(select 1 from gy_nursegroup where gy_ygdm.ygdm=gy_nursegroup.userid and gy_nursegroup.validflag='1')
+	</select>
+	<select id="getpersonsbyid" resultMap="person">
+		select userid from gy_nursegroup where userid=#userid#
+	</select>
+	<insert id="inserperson" parameterClass="java.util.Map">
+		insert into gy_nursegroup(USERID,VALIDFLAG) values(#userid#,#flag#)
+	</insert>
+	<update id="updateperson" parameterClass="java.util.Map">
+		update gy_nursegroup set VALIDFLAG=#flag# where USERID=#userid#
+	</update>
+</sqlMap>
