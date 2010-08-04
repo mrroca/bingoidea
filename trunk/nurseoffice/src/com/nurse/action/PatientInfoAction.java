@@ -107,7 +107,8 @@ public class PatientInfoAction extends BaseAction
     }
 
 
-    public String saveTPRBPinfo() 
+    @SuppressWarnings("unchecked")
+	public String saveTPRBPinfo() 
     {   long ms_survey_sbxh=0;
         long sbxh=0;
         long jzxh=0;
@@ -128,9 +129,12 @@ public class PatientInfoAction extends BaseAction
             
             
             
-            Map map1=new HashMap();
-            Map map2=new HashMap();
-            Map map3=new HashMap();
+            @SuppressWarnings("rawtypes")
+			Map map1=new HashMap();
+            @SuppressWarnings("rawtypes")
+			Map map2=new HashMap();
+            @SuppressWarnings("rawtypes")
+			Map map3=new HashMap();
         
             map1.put("ksdm", ksdm);
             map1.put("brxz", patient.getBrxz());
@@ -175,7 +179,8 @@ public class PatientInfoAction extends BaseAction
             map3.put("sfyqry", patient.getSfyqry());
             
              if(patient.getYbkh()==null || "".equals(patient.getYbkh())){
-                 Map countMap=new HashMap();
+                 @SuppressWarnings("rawtypes")
+				Map countMap=new HashMap();
                     countMap.put("type", "ms_ghmx");
                     if(patientDao.getCount(countMap)==0){
                         patientDao.insertStartNum(countMap);
@@ -188,7 +193,8 @@ public class PatientInfoAction extends BaseAction
                         patientDao.updateCount(countMap);
                     }
                     
-                    Map countMap1=new HashMap();
+                    @SuppressWarnings("rawtypes")
+					Map countMap1=new HashMap();
                     countMap1.put("type", "ms_brda");
                     if(patientDao.getCount(countMap1)==0){
                         patientDao.insertStartNum(countMap1);
@@ -201,7 +207,8 @@ public class PatientInfoAction extends BaseAction
                         patientDao.updateCount(countMap1);
                     }
                     
-                    Map countMap2=new HashMap();
+                    @SuppressWarnings("rawtypes")
+					Map countMap2=new HashMap();
                     countMap2.put("type", "jzxh");
                     if(patientDao.getCount(countMap2)==0){
                         patientDao.insertStartNum(countMap2);
@@ -214,7 +221,8 @@ public class PatientInfoAction extends BaseAction
                         patientDao.updateCount(countMap2);
                     }
                     
-                    Map countMap3=new HashMap();
+                    @SuppressWarnings("rawtypes")
+					Map countMap3=new HashMap();
                     countMap3.put("type", "mzhm");
                     if(patientDao.getCount(countMap3)==0){
                         patientDao.insertStartNum(countMap3);
@@ -226,7 +234,8 @@ public class PatientInfoAction extends BaseAction
                         countMap3.put("value", mzhm);
                         patientDao.updateCount(countMap3);
                     }
-                    Map countMap4=new HashMap();
+                    @SuppressWarnings("rawtypes")
+					Map countMap4=new HashMap();
                     countMap4.put("type", "ms_survey");
                     if(patientDao.getCount(countMap4)==0){
                         patientDao.insertStartNum(countMap4);
@@ -273,7 +282,8 @@ public class PatientInfoAction extends BaseAction
                     
                 }else{
                 	System.out.println("===========================================1============================================");
-                    Map countMap2=new HashMap();
+                    @SuppressWarnings("rawtypes")
+					Map countMap2=new HashMap();
                     countMap2.put("type", "jzxh");
                     if(patientDao.getCount(countMap2)==0){
                         patientDao.insertStartNum(countMap2);
@@ -290,7 +300,8 @@ public class PatientInfoAction extends BaseAction
                     
                     if(patient.getSbxh()==0){
                     	System.out.println("===========================================2============================================");
-                    	 Map countMap4=new HashMap();
+                    	 @SuppressWarnings("rawtypes")
+						Map countMap4=new HashMap();
                          countMap4.put("type", "ms_survey");
                          if(patientDao.getCount(countMap4)==0){
                              patientDao.insertStartNum(countMap4);
@@ -328,12 +339,14 @@ public class PatientInfoAction extends BaseAction
         setResult(temp.toString());
         return "success";
     }
-    public String getTprbpInfo() throws Exception
+    @SuppressWarnings("unchecked")
+	public String getTprbpInfo() throws Exception
     {
         JSONArray jarry = new JSONArray();
         PatientDao patientDao = (PatientDao) SystemInit.createFactory()
             .getBean("patientDao");
-        Map map = new HashMap();
+        @SuppressWarnings("rawtypes")
+		Map map = new HashMap();
         map.put("appid", patient.getAppid());
         map.put("sbxh", patient.getSbxh());
         List<?> li = (List<?>) patientDao.getTprbpInfo(map);
@@ -631,7 +644,6 @@ public class PatientInfoAction extends BaseAction
         JSONArray jarry2 = new JSONArray();
         JSONArray jarry3 = new JSONArray();
         JSONArray jarry4 = new JSONArray();
-        JSONArray jarry5 = new JSONArray();
         System.out.println(this.patient.getCfsbnumber());
         Map<String, String> hm = new HashMap<String, String>();
         hm.put("cfsb", this.patient.getCfsbnumber());
@@ -1552,16 +1564,17 @@ public class PatientInfoAction extends BaseAction
         }
         return "success";
     }
-    public String getAllObserved() throws Exception
+    @SuppressWarnings({ "unchecked", "rawtypes" })
+	public String getAllObserved() throws Exception
     {
         JSONArray jarry = new JSONArray();
         PatientDao patientDao = (PatientDao) SystemInit.createFactory()
             .getBean("patientDao");
-        List li =  patientDao.selectAllObserved();
-        List ypList;
+		List li =  patientDao.selectAllObserved();
+		List ypList;
         for (int i = 0; i < li.size(); i++)
         {	
-        	Map map=new HashMap();
+			Map map=new HashMap();
         	map.put("cfsb",Integer.parseInt(((Map)li.get(i)).get("cfsb").toString()) );
         	ypList=patientDao.getAllYp(map);
         	String ypmc="";
@@ -1577,6 +1590,7 @@ public class PatientInfoAction extends BaseAction
 //        System.out.println("===========result================="+getResult());
         return "success";
     }
+    @SuppressWarnings({ "unchecked", "rawtypes" })
     public String getAllObservedBetween() throws Exception
     {
         JSONArray jarry = new JSONArray();
