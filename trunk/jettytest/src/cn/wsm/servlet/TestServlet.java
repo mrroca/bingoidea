@@ -33,7 +33,7 @@ public class TestServlet extends HttpServlet {
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		System.out.println(request.getHeader("hi.adp"));
+		System.out.println(request.getHeader("hai.targetLogicService"));
 		System.out.println(request.getMethod());
 		System.out.println(request.getProtocol());
 		System.out.println(request.getScheme());
